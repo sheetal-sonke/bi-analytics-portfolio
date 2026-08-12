@@ -1,0 +1,9 @@
+File,Purpose
+dim_date.csv,Calendar dimension for time intelligence and filtering.
+dim_customer.csv,"Synthetic customer master with segment, industry, state, acquisition channel."
+dim_product.csv,"Synthetic product master with category, subcategory, pricing and standard cost."
+dim_location.csv,Distribution/sales locations and regions.
+dim_salesperson.csv,Salespeople assigned to locations.
+fact_sales.csv,"Transaction-level sales fact with revenue, COGS and gross profit."
+fact_inventory.csv,Monthly inventory snapshot by product and location.
+fact_sales_target.csv,Monthly sales targets by location.

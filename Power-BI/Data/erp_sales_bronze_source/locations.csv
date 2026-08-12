@@ -1,0 +1,7 @@
+location_id,location_name,region,state,city
+LOC001,West Hub,West,CA,Los Angeles
+LOC002,Mountain Hub,Mountain,UT,Salt Lake City
+LOC003,Central Hub,Central,TX,Dallas
+LOC004,Midwest Hub,Midwest,IL,Chicago
+LOC005,East Hub,East,NY,New York
+LOC006,Southeast Hub,Southeast,GA,Atlanta

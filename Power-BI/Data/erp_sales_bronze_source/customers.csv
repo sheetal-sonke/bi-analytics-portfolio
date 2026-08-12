@@ -1,0 +1,301 @@
+customer_id,customer_name,segment,industry,state,status
+CUST0001,Customer 001,SMB,Education,CO,Active
+CUST0002,Customer 002,SMB,Professional Services,FL,Active
+CUST0003,Customer 003,SMB,Healthcare,TX,Active
+CUST0004,Customer 004,SMB,Healthcare,UT,Active
+CUST0005,Customer 005,Mid-Market,Retail,NY,Active
+CUST0006,Customer 006,Mid-Market,Manufacturing,IL,Active
+CUST0007,Customer 007,SMB,Real Estate,NY,Active
+CUST0008,Customer 008,Enterprise,Healthcare,WA,Active
+CUST0009,Customer 009,SMB,Professional Services,CA,Active
+CUST0010,Customer 010,SMB,Education,NY,Active
+CUST0011,Customer 011,Mid-Market,Real Estate,FL,Active
+CUST0012,Customer 012,Retail,Professional Services,UT,Active
+CUST0013,Customer 013,Enterprise,Education,FL,Active
+CUST0014,Customer 014,Enterprise,Manufacturing,NJ,Active
+CUST0015,Customer 015,Mid-Market,Technology,TX,Active
+CUST0016,Customer 016,Enterprise,Retail,GA,Active
+CUST0017,Customer 017,Enterprise,Manufacturing,IL,Active
+CUST0018,Customer 018,Mid-Market,Healthcare,GA,Active
+CUST0019,Customer 019,Retail,Education,IL,Active
+CUST0020,Customer 020,Mid-Market,Education,WA,Active
+CUST0021,Customer 021,Enterprise,Education,GA,Active
+CUST0022,Customer 022,Retail,Hospitality,NY,Active
+CUST0023,Customer 023,Mid-Market,Healthcare,WA,Active
+CUST0024,Customer 024,Enterprise,Real Estate,IL,Active
+CUST0025,Customer 025,Mid-Market,Real Estate,GA,Active
+CUST0026,Customer 026,SMB,Hospitality,IL,Active
+CUST0027,Customer 027,Enterprise,Hospitality,WA,Active
+CUST0028,Customer 028,SMB,Retail,UT,Active
+CUST0029,Customer 029,SMB,Manufacturing,FL,Active
+CUST0030,Customer 030,Retail,Manufacturing,CA,Active
+CUST0031,Customer 031,Enterprise,Retail,TX,Active
+CUST0032,Customer 032,SMB,Professional Services,UT,Active
+CUST0033,Customer 033,Retail,Manufacturing,GA,Active
+CUST0034,Customer 034,Retail,Healthcare,WA,Active
+CUST0035,Customer 035,Mid-Market,Retail,CA,Active
+CUST0036,Customer 036,Retail,Professional Services,FL,Active
+CUST0037,Customer 037,Mid-Market,Manufacturing,WA,Active
+CUST0038,Customer 038,Enterprise,Manufacturing,NJ,Active
+CUST0039,Customer 039,SMB,Healthcare,NY,Active
+CUST0040,Customer 040,SMB,Technology,GA,Active
+CUST0041,Customer 041,Retail,Retail,FL,Active
+CUST0042,Customer 042,Mid-Market,Hospitality,WA,Active
+CUST0043,Customer 043,Retail,Education,NJ,Active
+CUST0044,Customer 044,SMB,Technology,FL,Active
+CUST0045,Customer 045,Enterprise,Retail,NY,Active
+CUST0046,Customer 046,Mid-Market,Technology,NJ,Active
+CUST0047,Customer 047,SMB,Real Estate,CO,Active
+CUST0048,Customer 048,Retail,Hospitality,FL,Active
+CUST0049,Customer 049,Retail,Education,UT,Active
+CUST0050,Customer 050,SMB,Manufacturing,UT,Active
+CUST0051,Customer 051,Mid-Market,Retail,IL,Active
+CUST0052,Customer 052,Mid-Market,Education,CA,Active
+CUST0053,Customer 053,Enterprise,Hospitality,CO,Active
+CUST0054,Customer 054,Enterprise,Real Estate,WA,Active
+CUST0055,Customer 055,Mid-Market,Technology,CO,Active
+CUST0056,Customer 056,Retail,Hospitality,TX,Active
+CUST0057,Customer 057,Enterprise,Healthcare,WA,Active
+CUST0058,Customer 058,Mid-Market,Education,FL,Active
+CUST0059,Customer 059,Retail,Professional Services,FL,Active
+CUST0060,Customer 060,Mid-Market,Healthcare,CO,Active
+CUST0061,Customer 061,Mid-Market,Real Estate,FL,Active
+CUST0062,Customer 062,SMB,Real Estate,NJ,Active
+CUST0063,Customer 063,Retail,Real Estate,TX,Active
+CUST0064,Customer 064,Retail,Real Estate,NY,Active
+CUST0065,Customer 065,Mid-Market,Retail,FL,Active
+CUST0066,Customer 066,Retail,Hospitality,NY,Active
+CUST0067,Customer 067,Retail,Healthcare,NY,Active
+CUST0068,Customer 068,Mid-Market,Retail,GA,Active
+CUST0069,Customer 069,SMB,Healthcare,TX,Active
+CUST0070,Customer 070,Mid-Market,Hospitality,WA,Active
+CUST0071,Customer 071,Mid-Market,Hospitality,UT,Active
+CUST0072,Customer 072,Retail,Technology,GA,Active
+CUST0073,Customer 073,Retail,Technology,CA,Active
+CUST0074,Customer 074,Mid-Market,Technology,WA,Active
+CUST0075,Customer 075,Enterprise,Technology,CO,Active
+CUST0076,Customer 076,Enterprise,Manufacturing,NY,Active
+CUST0077,Customer 077,Retail,Technology,FL,Active
+CUST0078,Customer 078,Mid-Market,Real Estate,IL,Active
+CUST0079,Customer 079,SMB,Technology,CO,Active
+CUST0080,Customer 080,Enterprise,Technology,GA,Active
+CUST0081,Customer 081,Retail,Education,CO,Active
+CUST0082,Customer 082,Mid-Market,Professional Services,WA,Active
+CUST0083,Customer 083,Enterprise,Healthcare,WA,Active
+CUST0084,Customer 084,Mid-Market,Real Estate,TX,Active
+CUST0085,Customer 085,Enterprise,Retail,WA,Active
+CUST0086,Customer 086,SMB,Hospitality,CO,Active
+CUST0087,Customer 087,SMB,Manufacturing,WA,Active
+CUST0088,Customer 088,SMB,Technology,NY,Active
+CUST0089,Customer 089,Enterprise,Real Estate,CA,Active
+CUST0090,Customer 090,Enterprise,Manufacturing,IL,Active
+CUST0091,Customer 091,Enterprise,Professional Services,CA,Active
+CUST0092,Customer 092,Mid-Market,Hospitality,CA,Active
+CUST0093,Customer 093,Mid-Market,Hospitality,TX,Active
+CUST0094,Customer 094,Retail,Healthcare,NJ,Active
+CUST0095,Customer 095,Mid-Market,Real Estate,NY,Active
+CUST0096,Customer 096,SMB,Education,NJ,Active
+CUST0097,Customer 097,Enterprise,Education,NY,Active
+CUST0098,Customer 098,Enterprise,Professional Services,NY,Active
+CUST0099,Customer 099,Retail,Technology,IL,Active
+CUST0100,Customer 100,Enterprise,Hospitality,UT,Active
+CUST0101,Customer 101,SMB,Healthcare,NJ,Active
+CUST0102,Customer 102,Enterprise,Manufacturing,FL,Active
+CUST0103,Customer 103,Retail,Manufacturing,UT,Active
+CUST0104,Customer 104,SMB,Professional Services,WA,Active
+CUST0105,Customer 105,Retail,Healthcare,WA,Active
+CUST0106,Customer 106,SMB,Real Estate,TX,Active
+CUST0107,Customer 107,Retail,Education,FL,Active
+CUST0108,Customer 108,SMB,Real Estate,CO,Active
+CUST0109,Customer 109,Retail,Retail,GA,Active
+CUST0110,Customer 110,Mid-Market,Healthcare,NY,Active
+CUST0111,Customer 111,Retail,Hospitality,CO,Active
+CUST0112,Customer 112,Retail,Manufacturing,CA,Active
+CUST0113,Customer 113,Retail,Manufacturing,TX,Active
+CUST0114,Customer 114,Retail,Hospitality,GA,Active
+CUST0115,Customer 115,SMB,Manufacturing,NY,Active
+CUST0116,Customer 116,SMB,Professional Services,FL,Active
+CUST0117,Customer 117,Mid-Market,Healthcare,IL,Active
+CUST0118,Customer 118,Retail,Real Estate,FL,Active
+CUST0119,Customer 119,Mid-Market,Real Estate,CO,Active
+CUST0120,Customer 120,Retail,Professional Services,UT,Active
+CUST0121,Customer 121,SMB,Hospitality,WA,Active
+CUST0122,Customer 122,Mid-Market,Retail,NJ,Active
+CUST0123,Customer 123,SMB,Real Estate,FL,Active
+CUST0124,Customer 124,SMB,Technology,FL,Active
+CUST0125,Customer 125,SMB,Manufacturing,CO,Active
+CUST0126,Customer 126,SMB,Retail,NY,Active
+CUST0127,Customer 127,Mid-Market,Healthcare,IL,Active
+CUST0128,Customer 128,SMB,Healthcare,FL,Active
+CUST0129,Customer 129,Mid-Market,Hospitality,IL,Active
+CUST0130,Customer 130,Retail,Retail,NJ,Active
+CUST0131,Customer 131,SMB,Healthcare,IL,Active
+CUST0132,Customer 132,SMB,Hospitality,GA,Active
+CUST0133,Customer 133,Mid-Market,Retail,CA,Active
+CUST0134,Customer 134,Mid-Market,Retail,CA,Active
+CUST0135,Customer 135,Enterprise,Retail,TX,Active
+CUST0136,Customer 136,Retail,Healthcare,CA,Active
+CUST0137,Customer 137,SMB,Real Estate,CO,Active
+CUST0138,Customer 138,Retail,Manufacturing,TX,Active
+CUST0139,Customer 139,Enterprise,Retail,CO,Active
+CUST0140,Customer 140,Enterprise,Healthcare,WA,Active
+CUST0141,Customer 141,Retail,Healthcare,NJ,Active
+CUST0142,Customer 142,Enterprise,Education,TX,Active
+CUST0143,Customer 143,SMB,Healthcare,IL,Active
+CUST0144,Customer 144,Enterprise,Technology,NJ,Active
+CUST0145,Customer 145,Mid-Market,Technology,CO,Active
+CUST0146,Customer 146,Retail,Retail,NJ,Active
+CUST0147,Customer 147,Retail,Retail,NJ,Active
+CUST0148,Customer 148,Enterprise,Healthcare,IL,Active
+CUST0149,Customer 149,Mid-Market,Retail,UT,Active
+CUST0150,Customer 150,Mid-Market,Hospitality,TX,Active
+CUST0151,Customer 151,Enterprise,Education,CA,Active
+CUST0152,Customer 152,Retail,Real Estate,NJ,Active
+CUST0153,Customer 153,Retail,Retail,CA,Active
+CUST0154,Customer 154,Mid-Market,Retail,NY,Active
+CUST0155,Customer 155,Retail,Healthcare,IL,Active
+CUST0156,Customer 156,SMB,Hospitality,WA,Active
+CUST0157,Customer 157,Enterprise,Hospitality,TX,Active
+CUST0158,Customer 158,SMB,Education,UT,Active
+CUST0159,Customer 159,Enterprise,Education,NY,Active
+CUST0160,Customer 160,SMB,Real Estate,UT,Active
+CUST0161,Customer 161,Retail,Retail,WA,Active
+CUST0162,Customer 162,SMB,Real Estate,CO,Active
+CUST0163,Customer 163,Enterprise,Professional Services,WA,Active
+CUST0164,Customer 164,SMB,Retail,CA,Active
+CUST0165,Customer 165,Enterprise,Hospitality,NJ,Active
+CUST0166,Customer 166,Enterprise,Retail,NJ,Active
+CUST0167,Customer 167,Enterprise,Education,CO,Active
+CUST0168,Customer 168,Retail,Retail,TX,Active
+CUST0169,Customer 169,Retail,Real Estate,UT,Active
+CUST0170,Customer 170,Retail,Manufacturing,WA,Active
+CUST0171,Customer 171,SMB,Manufacturing,UT,Active
+CUST0172,Customer 172,Mid-Market,Manufacturing,WA,Active
+CUST0173,Customer 173,Retail,Retail,WA,Active
+CUST0174,Customer 174,Enterprise,Real Estate,UT,Active
+CUST0175,Customer 175,SMB,Retail,GA,Active
+CUST0176,Customer 176,Enterprise,Technology,FL,Active
+CUST0177,Customer 177,Enterprise,Real Estate,WA,Active
+CUST0178,Customer 178,Enterprise,Hospitality,FL,Active
+CUST0179,Customer 179,SMB,Real Estate,CO,Active
+CUST0180,Customer 180,Enterprise,Hospitality,NY,Active
+CUST0181,Customer 181,Mid-Market,Retail,CO,Active
+CUST0182,Customer 182,Retail,Healthcare,CA,Active
+CUST0183,Customer 183,Mid-Market,Education,NY,Active
+CUST0184,Customer 184,Enterprise,Technology,UT,Active
+CUST0185,Customer 185,Mid-Market,Healthcare,CO,Active
+CUST0186,Customer 186,Enterprise,Education,CO,Active
+CUST0187,Customer 187,SMB,Retail,WA,Active
+CUST0188,Customer 188,Retail,Real Estate,IL,Active
+CUST0189,Customer 189,Retail,Education,WA,Active
+CUST0190,Customer 190,Mid-Market,Education,UT,Active
+CUST0191,Customer 191,SMB,Technology,GA,Active
+CUST0192,Customer 192,SMB,Professional Services,NY,Active
+CUST0193,Customer 193,SMB,Real Estate,TX,Active
+CUST0194,Customer 194,Retail,Real Estate,GA,Active
+CUST0195,Customer 195,SMB,Technology,CO,Active
+CUST0196,Customer 196,SMB,Hospitality,IL,Active
+CUST0197,Customer 197,Retail,Hospitality,WA,Active
+CUST0198,Customer 198,Enterprise,Manufacturing,CO,Active
+CUST0199,Customer 199,Retail,Technology,TX,Active
+CUST0200,Customer 200,Retail,Professional Services,TX,Active
+CUST0201,Customer 201,SMB,Healthcare,CO,Active
+CUST0202,Customer 202,Enterprise,Real Estate,CA,Active
+CUST0203,Customer 203,Mid-Market,Technology,TX,Active
+CUST0204,Customer 204,Enterprise,Real Estate,NY,Active
+CUST0205,Customer 205,SMB,Technology,UT,Active
+CUST0206,Customer 206,SMB,Technology,GA,Active
+CUST0207,Customer 207,Retail,Professional Services,NJ,Active
+CUST0208,Customer 208,Enterprise,Hospitality,NY,Active
+CUST0209,Customer 209,Mid-Market,Healthcare,WA,Active
+CUST0210,Customer 210,Enterprise,Healthcare,CO,Active
+CUST0211,Customer 211,Mid-Market,Retail,CA,Active
+CUST0212,Customer 212,Enterprise,Manufacturing,CA,Active
+CUST0213,Customer 213,SMB,Manufacturing,GA,Active
+CUST0214,Customer 214,Retail,Education,IL,Active
+CUST0215,Customer 215,Retail,Education,TX,Active
+CUST0216,Customer 216,Mid-Market,Healthcare,NJ,Active
+CUST0217,Customer 217,Retail,Hospitality,CO,Active
+CUST0218,Customer 218,Mid-Market,Hospitality,CO,Active
+CUST0219,Customer 219,SMB,Real Estate,NY,Active
+CUST0220,Customer 220,Enterprise,Real Estate,NY,Active
+CUST0221,Customer 221,Mid-Market,Healthcare,CO,Active
+CUST0222,Customer 222,SMB,Retail,WA,Active
+CUST0223,Customer 223,SMB,Real Estate,NY,Active
+CUST0224,Customer 224,Mid-Market,Technology,CO,Active
+CUST0225,Customer 225,Enterprise,Hospitality,WA,Active
+CUST0226,Customer 226,SMB,Retail,NY,Active
+CUST0227,Customer 227,Enterprise,Technology,NY,Active
+CUST0228,Customer 228,Enterprise,Professional Services,NJ,Active
+CUST0229,Customer 229,Retail,Retail,IL,Active
+CUST0230,Customer 230,SMB,Hospitality,IL,Active
+CUST0231,Customer 231,SMB,Education,UT,Active
+CUST0232,Customer 232,Enterprise,Retail,CO,Active
+CUST0233,Customer 233,Enterprise,Manufacturing,TX,Active
+CUST0234,Customer 234,Enterprise,Retail,GA,Active
+CUST0235,Customer 235,Retail,Education,IL,Active
+CUST0236,Customer 236,Mid-Market,Manufacturing,FL,Active
+CUST0237,Customer 237,SMB,Education,NY,Active
+CUST0238,Customer 238,Retail,Retail,GA,Active
+CUST0239,Customer 239,Enterprise,Real Estate,UT,Active
+CUST0240,Customer 240,Mid-Market,Hospitality,WA,Active
+CUST0241,Customer 241,SMB,Healthcare,WA,Active
+CUST0242,Customer 242,Enterprise,Retail,FL,Active
+CUST0243,Customer 243,Enterprise,Real Estate,GA,Active
+CUST0244,Customer 244,SMB,Technology,GA,Active
+CUST0245,Customer 245,Enterprise,Hospitality,CO,Active
+CUST0246,Customer 246,Enterprise,Manufacturing,NJ,Active
+CUST0247,Customer 247,Mid-Market,Healthcare,CO,Active
+CUST0248,Customer 248,SMB,Technology,UT,Active
+CUST0249,Customer 249,Mid-Market,Professional Services,CA,Active
+CUST0250,Customer 250,SMB,Real Estate,UT,Active
+CUST0251,Customer 251,Enterprise,Hospitality,FL,Active
+CUST0252,Customer 252,Mid-Market,Technology,CO,Active
+CUST0253,Customer 253,SMB,Technology,NJ,Active
+CUST0254,Customer 254,Mid-Market,Technology,UT,Active
+CUST0255,Customer 255,Retail,Technology,NY,Active
+CUST0256,Customer 256,Enterprise,Manufacturing,IL,Active
+CUST0257,Customer 257,Retail,Real Estate,IL,Active
+CUST0258,Customer 258,SMB,Healthcare,GA,Active
+CUST0259,Customer 259,SMB,Professional Services,WA,Active
+CUST0260,Customer 260,SMB,Hospitality,UT,Active
+CUST0261,Customer 261,Retail,Healthcare,IL,Active
+CUST0262,Customer 262,Enterprise,Professional Services,GA,Active
+CUST0263,Customer 263,Mid-Market,Education,NJ,Active
+CUST0264,Customer 264,Mid-Market,Healthcare,FL,Active
+CUST0265,Customer 265,Mid-Market,Hospitality,IL,Active
+CUST0266,Customer 266,SMB,Education,NJ,Active
+CUST0267,Customer 267,Enterprise,Retail,TX,Active
+CUST0268,Customer 268,Mid-Market,Retail,TX,Active
+CUST0269,Customer 269,Enterprise,Professional Services,TX,Active
+CUST0270,Customer 270,Enterprise,Manufacturing,IL,Active
+CUST0271,Customer 271,SMB,Professional Services,TX,Active
+CUST0272,Customer 272,SMB,Professional Services,TX,Active
+CUST0273,Customer 273,Retail,Healthcare,UT,Active
+CUST0274,Customer 274,Retail,Real Estate,GA,Active
+CUST0275,Customer 275,Enterprise,Real Estate,FL,Active
+CUST0276,Customer 276,Mid-Market,Professional Services,FL,Active
+CUST0277,Customer 277,SMB,Real Estate,CA,Active
+CUST0278,Customer 278,Enterprise,Real Estate,WA,Active
+CUST0279,Customer 279,Retail,Healthcare,CO,Active
+CUST0280,Customer 280,Retail,Healthcare,UT,Active
+CUST0281,Customer 281,SMB,Education,UT,Active
+CUST0282,Customer 282,Mid-Market,Retail,NJ,Active
+CUST0283,Customer 283,SMB,Technology,NJ,Active
+CUST0284,Customer 284,SMB,Real Estate,FL,Active
+CUST0285,Customer 285,Retail,Healthcare,UT,Active
+CUST0286,Customer 286,Mid-Market,Technology,CO,Active
+CUST0287,Customer 287,Mid-Market,Technology,GA,Active
+CUST0288,Customer 288,Retail,Technology,WA,Active
+CUST0289,Customer 289,Enterprise,Manufacturing,WA,Active
+CUST0290,Customer 290,SMB,Retail,GA,Active
+CUST0291,Customer 291,Mid-Market,Real Estate,UT,Active
+CUST0292,Customer 292,Enterprise,Healthcare,UT,Active
+CUST0293,Customer 293,Retail,Healthcare,GA,Active
+CUST0294,Customer 294,Mid-Market,Professional Services,NJ,Active
+CUST0295,Customer 295,SMB,Healthcare,WA,Active
+CUST0296,Customer 296,SMB,Technology,CA,Active
+CUST0297,Customer 297,SMB,Retail,GA,Active
+CUST0298,Customer 298,Enterprise,Hospitality,TX,Active
+CUST0299,Customer 299,Retail,Hospitality,UT,Active
+CUST0300,Customer 300,SMB,Manufacturing,UT,Active

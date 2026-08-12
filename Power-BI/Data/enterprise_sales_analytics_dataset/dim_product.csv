@@ -1,0 +1,101 @@
+ProductKey,ProductName,Category,Subcategory,ListPrice,StandardCost,Tier,Status
+1,Desk 01,Office Furniture,Desk,366.67,206.27,Premium,Active
+2,Desk 02,Office Furniture,Desk,704.06,428.56,Premium,Active
+3,Desk 03,Office Furniture,Desk,542.36,368.29,Value,Active
+4,Desk 04,Office Furniture,Desk,565.39,366.99,Standard,Active
+5,Desk 05,Office Furniture,Desk,743.49,532.68,Standard,Active
+6,Chair 01,Office Furniture,Chair,385.91,227.23,Premium,Active
+7,Chair 02,Office Furniture,Chair,376.86,199.84,Premium,Active
+8,Chair 03,Office Furniture,Chair,594.31,309.68,Value,Active
+9,Chair 04,Office Furniture,Chair,188.7,107.76,Value,Active
+10,Chair 05,Office Furniture,Chair,663.0,452.35,Standard,Active
+11,Storage 01,Office Furniture,Storage,787.84,530.38,Premium,Active
+12,Storage 02,Office Furniture,Storage,100.23,70.08,Value,Active
+13,Storage 03,Office Furniture,Storage,233.49,140.05,Value,Seasonal
+14,Storage 04,Office Furniture,Storage,170.01,87.3,Value,Active
+15,Storage 05,Office Furniture,Storage,719.78,419.51,Value,Seasonal
+16,Conference Table 01,Office Furniture,Conference Table,369.42,265.74,Standard,Seasonal
+17,Conference Table 02,Office Furniture,Conference Table,122.73,60.3,Standard,Active
+18,Conference Table 03,Office Furniture,Conference Table,610.98,409.41,Premium,Active
+19,Conference Table 04,Office Furniture,Conference Table,390.14,243.06,Premium,Active
+20,Conference Table 05,Office Furniture,Conference Table,923.68,634.19,Standard,Active
+21,Pendant 01,Lighting,Pendant,660.36,402.07,Premium,Active
+22,Pendant 02,Lighting,Pendant,141.51,82.69,Premium,Active
+23,Pendant 03,Lighting,Pendant,907.97,626.69,Premium,Active
+24,Pendant 04,Lighting,Pendant,501.99,253.78,Value,Active
+25,Pendant 05,Lighting,Pendant,805.92,485.03,Standard,Active
+26,Floor Lamp 01,Lighting,Floor Lamp,380.26,197.27,Value,Active
+27,Floor Lamp 02,Lighting,Floor Lamp,585.04,349.42,Standard,Active
+28,Floor Lamp 03,Lighting,Floor Lamp,839.64,570.62,Premium,Active
+29,Floor Lamp 04,Lighting,Floor Lamp,92.71,64.04,Standard,Active
+30,Floor Lamp 05,Lighting,Floor Lamp,706.04,477.17,Value,Active
+31,Desk Lamp 01,Lighting,Desk Lamp,156.84,93.17,Value,Active
+32,Desk Lamp 02,Lighting,Desk Lamp,281.2,193.86,Premium,Active
+33,Desk Lamp 03,Lighting,Desk Lamp,885.31,585.42,Value,Active
+34,Desk Lamp 04,Lighting,Desk Lamp,688.78,396.57,Value,Active
+35,Desk Lamp 05,Lighting,Desk Lamp,438.67,265.05,Standard,Active
+36,Wall Light 01,Lighting,Wall Light,244.47,137.18,Value,Active
+37,Wall Light 02,Lighting,Wall Light,575.48,277.22,Value,Active
+38,Wall Light 03,Lighting,Wall Light,248.34,173.17,Premium,Active
+39,Wall Light 04,Lighting,Wall Light,507.88,277.73,Premium,Active
+40,Wall Light 05,Lighting,Wall Light,530.7,346.87,Value,Seasonal
+41,Mirror 01,Home Decor,Mirror,261.13,154.98,Premium,Active
+42,Mirror 02,Home Decor,Mirror,125.84,80.3,Premium,Seasonal
+43,Mirror 03,Home Decor,Mirror,414.1,284.62,Standard,Active
+44,Mirror 04,Home Decor,Mirror,95.16,62.31,Standard,Active
+45,Mirror 05,Home Decor,Mirror,214.35,130.47,Standard,Seasonal
+46,Rug 01,Home Decor,Rug,206.97,122.33,Standard,Seasonal
+47,Rug 02,Home Decor,Rug,775.3,531.42,Standard,Active
+48,Rug 03,Home Decor,Rug,633.45,386.24,Standard,Active
+49,Rug 04,Home Decor,Rug,882.99,603.69,Standard,Seasonal
+50,Rug 05,Home Decor,Rug,481.93,256.05,Premium,Active
+51,Artwork 01,Home Decor,Artwork,189.82,91.21,Premium,Active
+52,Artwork 02,Home Decor,Artwork,883.13,590.31,Premium,Seasonal
+53,Artwork 03,Home Decor,Artwork,673.9,441.62,Value,Seasonal
+54,Artwork 04,Home Decor,Artwork,180.87,99.69,Standard,Active
+55,Artwork 05,Home Decor,Artwork,720.66,355.8,Value,Seasonal
+56,Decor Accent 01,Home Decor,Decor Accent,497.59,340.68,Standard,Active
+57,Decor Accent 02,Home Decor,Decor Accent,914.31,456.45,Standard,Active
+58,Decor Accent 03,Home Decor,Decor Accent,581.48,373.34,Standard,Seasonal
+59,Decor Accent 04,Home Decor,Decor Accent,149.1,103.42,Standard,Active
+60,Decor Accent 05,Home Decor,Decor Accent,603.64,350.48,Value,Active
+61,Patio Chair 01,Outdoor,Patio Chair,890.58,471.14,Value,Active
+62,Patio Chair 02,Outdoor,Patio Chair,257.2,147.89,Value,Active
+63,Patio Chair 03,Outdoor,Patio Chair,456.07,320.6,Standard,Active
+64,Patio Chair 04,Outdoor,Patio Chair,457.04,328.9,Standard,Active
+65,Patio Chair 05,Outdoor,Patio Chair,529.25,318.3,Standard,Active
+66,Outdoor Table 01,Outdoor,Outdoor Table,841.59,581.56,Premium,Active
+67,Outdoor Table 02,Outdoor,Outdoor Table,183.55,124.83,Value,Active
+68,Outdoor Table 03,Outdoor,Outdoor Table,596.63,427.74,Value,Active
+69,Outdoor Table 04,Outdoor,Outdoor Table,647.76,397.14,Value,Active
+70,Outdoor Table 05,Outdoor,Outdoor Table,894.43,458.15,Standard,Active
+71,Planter 01,Outdoor,Planter,715.6,370.18,Premium,Active
+72,Planter 02,Outdoor,Planter,693.03,366.52,Value,Active
+73,Planter 03,Outdoor,Planter,499.92,270.09,Standard,Active
+74,Planter 04,Outdoor,Planter,617.2,419.1,Standard,Active
+75,Planter 05,Outdoor,Planter,343.54,175.68,Premium,Active
+76,Umbrella 01,Outdoor,Umbrella,714.52,437.57,Premium,Active
+77,Umbrella 02,Outdoor,Umbrella,141.81,100.23,Value,Active
+78,Umbrella 03,Outdoor,Umbrella,536.49,364.97,Value,Active
+79,Umbrella 04,Outdoor,Umbrella,431.11,211.26,Premium,Active
+80,Umbrella 05,Outdoor,Umbrella,858.02,455.11,Standard,Active
+81,Organizer 01,Accessories,Organizer,361.85,222.31,Premium,Active
+82,Organizer 02,Accessories,Organizer,882.45,473.71,Standard,Active
+83,Organizer 03,Accessories,Organizer,842.09,409.21,Value,Active
+84,Organizer 04,Accessories,Organizer,751.97,435.25,Value,Active
+85,Organizer 05,Accessories,Organizer,282.79,189.18,Standard,Seasonal
+86,Mat 01,Accessories,Mat,833.67,571.95,Standard,Active
+87,Mat 02,Accessories,Mat,783.09,462.4,Premium,Active
+88,Mat 03,Accessories,Mat,242.86,155.04,Premium,Active
+89,Mat 04,Accessories,Mat,293.53,145.78,Premium,Active
+90,Mat 05,Accessories,Mat,623.75,359.23,Value,Active
+91,Clock 01,Accessories,Clock,894.71,454.23,Premium,Active
+92,Clock 02,Accessories,Clock,568.34,406.96,Standard,Active
+93,Clock 03,Accessories,Clock,582.88,328.14,Premium,Seasonal
+94,Clock 04,Accessories,Clock,591.65,356.61,Premium,Active
+95,Clock 05,Accessories,Clock,271.8,176.7,Standard,Active
+96,Basket 01,Accessories,Basket,371.44,184.53,Value,Active
+97,Basket 02,Accessories,Basket,607.07,388.05,Standard,Active
+98,Basket 03,Accessories,Basket,501.48,320.98,Premium,Seasonal
+99,Basket 04,Accessories,Basket,674.46,413.48,Standard,Seasonal
+100,Basket 05,Accessories,Basket,645.09,368.34,Value,Active

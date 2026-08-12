@@ -1,0 +1,301 @@
+CustomerKey,CustomerName,Segment,Industry,State,AcquisitionChannel,CustomerSince
+1,Customer 001,SMB,Retail,WA,E-commerce,2022-01-01
+2,Customer 002,Mid-Market,Hospitality,WA,E-commerce,2025-05-27
+3,Customer 003,SMB,Real Estate,CO,Partner,2025-10-15
+4,Customer 004,Mid-Market,Real Estate,AZ,Direct,2025-09-11
+5,Customer 005,Enterprise,Manufacturing,UT,Direct,2025-10-09
+6,Customer 006,Mid-Market,Hospitality,TX,Direct,2022-04-05
+7,Customer 007,Mid-Market,Real Estate,NJ,Direct,2024-07-21
+8,Customer 008,SMB,Hospitality,AZ,E-commerce,2024-02-26
+9,Customer 009,SMB,Hospitality,TX,E-commerce,2025-11-09
+10,Customer 010,Enterprise,Healthcare,WA,Direct,2022-12-27
+11,Customer 011,Retail,Real Estate,CA,E-commerce,2023-05-26
+12,Customer 012,Retail,Healthcare,CO,Direct,2024-08-09
+13,Customer 013,SMB,Manufacturing,CO,E-commerce,2026-01-13
+14,Customer 014,Retail,Technology,FL,Partner,2022-11-22
+15,Customer 015,SMB,Real Estate,CO,Partner,2023-05-22
+16,Customer 016,Retail,Retail,FL,Partner,2025-07-07
+17,Customer 017,Mid-Market,Real Estate,UT,E-commerce,2023-08-09
+18,Customer 018,Mid-Market,Manufacturing,GA,E-commerce,2022-06-15
+19,Customer 019,Enterprise,Hospitality,WA,E-commerce,2022-11-09
+20,Customer 020,SMB,Healthcare,WA,Partner,2023-11-09
+21,Customer 021,SMB,Technology,CA,Direct,2024-05-10
+22,Customer 022,Mid-Market,Professional Services,NJ,Partner,2024-09-03
+23,Customer 023,Enterprise,Manufacturing,NY,Partner,2024-05-08
+24,Customer 024,SMB,Hospitality,CO,Direct,2023-07-13
+25,Customer 025,SMB,Professional Services,WA,Partner,2025-10-01
+26,Customer 026,SMB,Technology,AZ,Direct,2024-08-15
+27,Customer 027,Retail,Professional Services,WA,E-commerce,2025-03-01
+28,Customer 028,SMB,Healthcare,MA,Partner,2022-10-05
+29,Customer 029,Retail,Education,CA,Partner,2024-02-16
+30,Customer 030,Mid-Market,Real Estate,GA,Partner,2024-02-16
+31,Customer 031,Mid-Market,Technology,NY,Direct,2024-08-21
+32,Customer 032,Enterprise,Professional Services,GA,Direct,2025-08-24
+33,Customer 033,Enterprise,Professional Services,CA,Direct,2023-02-13
+34,Customer 034,Retail,Education,IL,Direct,2024-08-27
+35,Customer 035,SMB,Hospitality,CO,E-commerce,2023-06-09
+36,Customer 036,Retail,Education,NJ,E-commerce,2026-01-11
+37,Customer 037,Enterprise,Education,NY,Direct,2025-03-31
+38,Customer 038,Enterprise,Retail,NJ,E-commerce,2024-02-08
+39,Customer 039,Mid-Market,Hospitality,UT,E-commerce,2025-11-15
+40,Customer 040,Retail,Hospitality,UT,E-commerce,2023-09-10
+41,Customer 041,Retail,Healthcare,NJ,Direct,2023-12-13
+42,Customer 042,SMB,Manufacturing,UT,E-commerce,2025-08-19
+43,Customer 043,Mid-Market,Technology,CO,Direct,2024-06-06
+44,Customer 044,Retail,Real Estate,AZ,Direct,2024-06-10
+45,Customer 045,Mid-Market,Retail,NJ,E-commerce,2024-09-17
+46,Customer 046,SMB,Retail,GA,Direct,2022-06-27
+47,Customer 047,Mid-Market,Real Estate,IL,Partner,2025-03-13
+48,Customer 048,SMB,Technology,GA,Direct,2024-10-09
+49,Customer 049,Retail,Education,CO,Direct,2023-12-28
+50,Customer 050,Retail,Manufacturing,NY,E-commerce,2025-12-07
+51,Customer 051,Retail,Professional Services,FL,Direct,2022-06-25
+52,Customer 052,Mid-Market,Technology,CO,E-commerce,2023-05-08
+53,Customer 053,SMB,Real Estate,CO,Direct,2022-07-10
+54,Customer 054,Mid-Market,Technology,AZ,Direct,2023-09-20
+55,Customer 055,SMB,Manufacturing,CO,E-commerce,2024-12-23
+56,Customer 056,Mid-Market,Manufacturing,GA,E-commerce,2024-07-18
+57,Customer 057,Mid-Market,Retail,IL,Direct,2026-01-17
+58,Customer 058,Mid-Market,Healthcare,AZ,E-commerce,2025-11-14
+59,Customer 059,Mid-Market,Hospitality,AZ,Partner,2023-07-21
+60,Customer 060,SMB,Retail,UT,Direct,2023-08-30
+61,Customer 061,Mid-Market,Education,NY,Direct,2025-12-21
+62,Customer 062,SMB,Retail,CA,Direct,2025-02-07
+63,Customer 063,Mid-Market,Education,MA,Partner,2022-07-30
+64,Customer 064,Retail,Retail,CO,Partner,2024-06-21
+65,Customer 065,Mid-Market,Professional Services,NY,Partner,2022-08-22
+66,Customer 066,Retail,Technology,CO,Direct,2025-03-27
+67,Customer 067,SMB,Professional Services,TX,Direct,2025-02-26
+68,Customer 068,Retail,Healthcare,IL,Direct,2025-02-16
+69,Customer 069,Retail,Hospitality,FL,Partner,2024-07-11
+70,Customer 070,Retail,Retail,NJ,Partner,2023-09-18
+71,Customer 071,SMB,Professional Services,NJ,E-commerce,2022-07-23
+72,Customer 072,Retail,Hospitality,MA,Direct,2023-06-26
+73,Customer 073,SMB,Education,IL,Direct,2025-02-04
+74,Customer 074,Enterprise,Professional Services,WA,Partner,2025-11-12
+75,Customer 075,SMB,Retail,CA,Direct,2023-08-14
+76,Customer 076,SMB,Real Estate,UT,E-commerce,2023-04-24
+77,Customer 077,Retail,Hospitality,WA,Direct,2025-01-20
+78,Customer 078,Mid-Market,Education,NY,Direct,2022-05-27
+79,Customer 079,Enterprise,Retail,NJ,E-commerce,2025-03-11
+80,Customer 080,Retail,Real Estate,UT,Partner,2025-11-11
+81,Customer 081,Mid-Market,Technology,NY,E-commerce,2025-01-10
+82,Customer 082,SMB,Healthcare,NJ,Direct,2024-06-03
+83,Customer 083,SMB,Retail,CA,Direct,2023-04-14
+84,Customer 084,Retail,Professional Services,MA,Partner,2025-03-26
+85,Customer 085,Enterprise,Education,CO,E-commerce,2025-08-27
+86,Customer 086,SMB,Retail,TX,E-commerce,2024-06-11
+87,Customer 087,SMB,Real Estate,UT,Partner,2023-12-14
+88,Customer 088,SMB,Manufacturing,MA,Direct,2022-11-26
+89,Customer 089,Mid-Market,Real Estate,NY,E-commerce,2024-03-31
+90,Customer 090,Retail,Professional Services,CO,Direct,2023-10-07
+91,Customer 091,Mid-Market,Healthcare,WA,E-commerce,2022-01-03
+92,Customer 092,SMB,Real Estate,WA,Direct,2023-01-20
+93,Customer 093,SMB,Real Estate,MA,Partner,2022-04-16
+94,Customer 094,Mid-Market,Education,NY,Partner,2025-12-01
+95,Customer 095,SMB,Professional Services,MA,E-commerce,2023-05-06
+96,Customer 096,SMB,Retail,FL,Direct,2025-02-05
+97,Customer 097,SMB,Hospitality,UT,Partner,2022-08-29
+98,Customer 098,SMB,Education,CO,E-commerce,2023-08-21
+99,Customer 099,SMB,Retail,WA,Partner,2024-08-25
+100,Customer 100,Mid-Market,Education,WA,Direct,2025-05-12
+101,Customer 101,SMB,Education,UT,Partner,2024-04-29
+102,Customer 102,Mid-Market,Retail,CA,Partner,2026-01-26
+103,Customer 103,Mid-Market,Real Estate,TX,Partner,2025-01-08
+104,Customer 104,SMB,Manufacturing,FL,E-commerce,2024-02-12
+105,Customer 105,SMB,Manufacturing,IL,E-commerce,2023-05-05
+106,Customer 106,SMB,Hospitality,WA,Direct,2023-10-14
+107,Customer 107,SMB,Technology,WA,E-commerce,2025-08-28
+108,Customer 108,Retail,Real Estate,CA,Direct,2024-10-25
+109,Customer 109,Retail,Manufacturing,UT,Partner,2022-07-24
+110,Customer 110,SMB,Real Estate,CA,E-commerce,2022-10-23
+111,Customer 111,SMB,Education,UT,Partner,2023-06-27
+112,Customer 112,Mid-Market,Technology,MA,Direct,2023-11-04
+113,Customer 113,Retail,Technology,GA,E-commerce,2026-01-11
+114,Customer 114,Retail,Real Estate,FL,Direct,2025-06-18
+115,Customer 115,Enterprise,Retail,IL,E-commerce,2022-07-05
+116,Customer 116,SMB,Healthcare,MA,E-commerce,2022-07-25
+117,Customer 117,SMB,Retail,CA,Direct,2023-10-27
+118,Customer 118,Retail,Retail,GA,Partner,2024-06-01
+119,Customer 119,Enterprise,Technology,NJ,E-commerce,2023-01-04
+120,Customer 120,Mid-Market,Healthcare,NJ,Partner,2025-06-23
+121,Customer 121,SMB,Real Estate,NJ,Direct,2023-04-21
+122,Customer 122,SMB,Retail,CO,Partner,2025-09-27
+123,Customer 123,Enterprise,Real Estate,NY,E-commerce,2025-01-24
+124,Customer 124,Mid-Market,Real Estate,GA,E-commerce,2023-09-05
+125,Customer 125,SMB,Technology,AZ,Partner,2024-07-24
+126,Customer 126,Retail,Hospitality,WA,Partner,2022-08-07
+127,Customer 127,Mid-Market,Manufacturing,NJ,Partner,2025-12-03
+128,Customer 128,Mid-Market,Technology,NY,Direct,2025-03-05
+129,Customer 129,Retail,Professional Services,NJ,E-commerce,2024-10-14
+130,Customer 130,Retail,Retail,IL,E-commerce,2023-12-23
+131,Customer 131,Mid-Market,Hospitality,NJ,Partner,2025-10-20
+132,Customer 132,Retail,Education,MA,Direct,2025-07-09
+133,Customer 133,SMB,Retail,CO,Direct,2025-04-01
+134,Customer 134,Mid-Market,Education,UT,Partner,2023-11-01
+135,Customer 135,SMB,Education,IL,Direct,2025-01-09
+136,Customer 136,Retail,Manufacturing,FL,E-commerce,2023-07-13
+137,Customer 137,Retail,Retail,CO,Partner,2023-11-25
+138,Customer 138,Retail,Real Estate,UT,Direct,2023-04-08
+139,Customer 139,Retail,Technology,FL,Partner,2022-07-04
+140,Customer 140,Retail,Professional Services,NY,E-commerce,2022-09-11
+141,Customer 141,SMB,Retail,NJ,Partner,2025-07-31
+142,Customer 142,Retail,Healthcare,MA,Direct,2024-08-23
+143,Customer 143,Enterprise,Manufacturing,NJ,Direct,2025-08-19
+144,Customer 144,Enterprise,Real Estate,AZ,Partner,2025-08-22
+145,Customer 145,SMB,Education,CA,Direct,2023-09-16
+146,Customer 146,Retail,Healthcare,UT,Direct,2025-01-05
+147,Customer 147,Enterprise,Real Estate,GA,E-commerce,2025-11-27
+148,Customer 148,Retail,Technology,NJ,E-commerce,2026-01-28
+149,Customer 149,Mid-Market,Technology,MA,Direct,2024-09-29
+150,Customer 150,SMB,Retail,CA,E-commerce,2024-01-29
+151,Customer 151,Mid-Market,Real Estate,IL,Partner,2022-07-23
+152,Customer 152,Retail,Manufacturing,FL,E-commerce,2024-01-05
+153,Customer 153,Enterprise,Retail,IL,Direct,2024-07-20
+154,Customer 154,Enterprise,Hospitality,MA,E-commerce,2025-05-07
+155,Customer 155,Retail,Professional Services,GA,Direct,2022-09-15
+156,Customer 156,Retail,Hospitality,UT,E-commerce,2023-03-01
+157,Customer 157,SMB,Hospitality,GA,Direct,2025-05-05
+158,Customer 158,Enterprise,Education,TX,E-commerce,2023-05-29
+159,Customer 159,Retail,Healthcare,MA,Direct,2022-09-27
+160,Customer 160,Enterprise,Hospitality,NJ,Partner,2022-02-02
+161,Customer 161,Mid-Market,Professional Services,TX,E-commerce,2024-05-12
+162,Customer 162,SMB,Healthcare,CO,Partner,2024-01-12
+163,Customer 163,SMB,Healthcare,CO,E-commerce,2023-03-30
+164,Customer 164,Retail,Professional Services,AZ,E-commerce,2024-12-03
+165,Customer 165,Mid-Market,Professional Services,CA,Partner,2024-04-02
+166,Customer 166,SMB,Healthcare,CO,E-commerce,2024-06-27
+167,Customer 167,Enterprise,Healthcare,GA,E-commerce,2022-10-31
+168,Customer 168,Enterprise,Retail,NJ,E-commerce,2025-04-13
+169,Customer 169,SMB,Manufacturing,WA,E-commerce,2024-12-22
+170,Customer 170,Mid-Market,Technology,UT,E-commerce,2022-08-23
+171,Customer 171,Retail,Hospitality,WA,Partner,2023-04-13
+172,Customer 172,SMB,Real Estate,WA,Partner,2026-02-03
+173,Customer 173,Enterprise,Technology,GA,E-commerce,2023-06-07
+174,Customer 174,Mid-Market,Education,MA,Partner,2022-05-18
+175,Customer 175,Enterprise,Healthcare,UT,Partner,2022-07-17
+176,Customer 176,SMB,Manufacturing,TX,E-commerce,2022-05-03
+177,Customer 177,SMB,Manufacturing,MA,Direct,2024-04-21
+178,Customer 178,Mid-Market,Technology,AZ,Direct,2023-08-13
+179,Customer 179,SMB,Manufacturing,UT,E-commerce,2024-11-05
+180,Customer 180,Mid-Market,Real Estate,IL,Direct,2023-12-19
+181,Customer 181,Retail,Manufacturing,UT,Partner,2025-03-21
+182,Customer 182,Mid-Market,Technology,FL,E-commerce,2025-06-10
+183,Customer 183,SMB,Professional Services,NJ,E-commerce,2025-11-21
+184,Customer 184,Mid-Market,Education,NY,E-commerce,2023-09-25
+185,Customer 185,Retail,Manufacturing,CA,Direct,2022-10-21
+186,Customer 186,SMB,Technology,UT,Direct,2025-07-20
+187,Customer 187,Retail,Healthcare,AZ,E-commerce,2023-03-17
+188,Customer 188,Mid-Market,Real Estate,GA,Direct,2024-01-28
+189,Customer 189,Mid-Market,Manufacturing,NJ,E-commerce,2022-06-23
+190,Customer 190,Retail,Education,TX,E-commerce,2022-04-12
+191,Customer 191,SMB,Retail,CO,E-commerce,2024-05-18
+192,Customer 192,SMB,Real Estate,WA,Partner,2023-03-18
+193,Customer 193,Retail,Healthcare,GA,Partner,2022-08-16
+194,Customer 194,Mid-Market,Real Estate,FL,E-commerce,2023-09-24
+195,Customer 195,Enterprise,Technology,NJ,Direct,2022-01-16
+196,Customer 196,Mid-Market,Hospitality,TX,Partner,2023-08-16
+197,Customer 197,Mid-Market,Professional Services,CO,E-commerce,2024-05-31
+198,Customer 198,Mid-Market,Technology,FL,E-commerce,2023-04-17
+199,Customer 199,SMB,Manufacturing,UT,Partner,2022-03-28
+200,Customer 200,SMB,Real Estate,UT,Partner,2025-03-25
+201,Customer 201,SMB,Technology,AZ,E-commerce,2024-05-05
+202,Customer 202,Mid-Market,Technology,CA,Partner,2022-12-18
+203,Customer 203,Retail,Real Estate,AZ,Partner,2022-06-30
+204,Customer 204,SMB,Healthcare,IL,Partner,2025-04-21
+205,Customer 205,SMB,Healthcare,WA,Partner,2023-11-27
+206,Customer 206,Mid-Market,Education,UT,E-commerce,2025-07-20
+207,Customer 207,Enterprise,Hospitality,GA,Partner,2026-01-29
+208,Customer 208,Retail,Education,IL,Direct,2022-10-27
+209,Customer 209,Mid-Market,Education,NJ,Direct,2025-09-04
+210,Customer 210,Enterprise,Real Estate,CO,E-commerce,2025-04-01
+211,Customer 211,SMB,Manufacturing,MA,Partner,2022-11-06
+212,Customer 212,SMB,Real Estate,CO,E-commerce,2023-09-13
+213,Customer 213,Retail,Professional Services,GA,E-commerce,2022-06-01
+214,Customer 214,Mid-Market,Real Estate,CA,Direct,2024-01-26
+215,Customer 215,Retail,Healthcare,MA,Direct,2025-06-13
+216,Customer 216,SMB,Technology,CO,E-commerce,2025-02-09
+217,Customer 217,Retail,Professional Services,CO,E-commerce,2025-08-27
+218,Customer 218,Mid-Market,Real Estate,FL,Direct,2022-05-07
+219,Customer 219,SMB,Manufacturing,AZ,Direct,2024-10-30
+220,Customer 220,SMB,Professional Services,IL,E-commerce,2024-06-15
+221,Customer 221,Retail,Education,GA,Partner,2023-08-03
+222,Customer 222,Mid-Market,Manufacturing,MA,E-commerce,2022-04-18
+223,Customer 223,Retail,Manufacturing,UT,Partner,2022-07-13
+224,Customer 224,SMB,Technology,NY,Partner,2026-01-22
+225,Customer 225,Retail,Education,GA,Direct,2025-04-08
+226,Customer 226,SMB,Manufacturing,NY,E-commerce,2025-12-01
+227,Customer 227,SMB,Education,NJ,E-commerce,2022-06-23
+228,Customer 228,Mid-Market,Technology,MA,Partner,2022-09-19
+229,Customer 229,SMB,Healthcare,MA,E-commerce,2024-05-17
+230,Customer 230,SMB,Professional Services,GA,Partner,2023-01-05
+231,Customer 231,Retail,Manufacturing,CO,Direct,2023-04-09
+232,Customer 232,Retail,Education,UT,Partner,2022-07-27
+233,Customer 233,SMB,Professional Services,MA,Partner,2025-06-19
+234,Customer 234,Enterprise,Technology,TX,Direct,2023-01-06
+235,Customer 235,Retail,Education,AZ,Partner,2022-03-31
+236,Customer 236,SMB,Hospitality,CO,E-commerce,2023-08-07
+237,Customer 237,Retail,Real Estate,IL,E-commerce,2023-05-05
+238,Customer 238,Mid-Market,Real Estate,IL,Partner,2025-10-21
+239,Customer 239,Retail,Real Estate,CO,Partner,2024-02-22
+240,Customer 240,SMB,Technology,TX,Direct,2025-05-23
+241,Customer 241,Enterprise,Retail,CA,E-commerce,2024-09-11
+242,Customer 242,Retail,Healthcare,AZ,E-commerce,2022-09-13
+243,Customer 243,Mid-Market,Education,NY,Partner,2024-11-17
+244,Customer 244,Enterprise,Technology,UT,Direct,2024-07-12
+245,Customer 245,Retail,Professional Services,WA,Direct,2024-03-22
+246,Customer 246,SMB,Hospitality,WA,Direct,2024-02-07
+247,Customer 247,Mid-Market,Manufacturing,UT,E-commerce,2025-08-24
+248,Customer 248,Mid-Market,Education,TX,Direct,2023-08-11
+249,Customer 249,Retail,Real Estate,AZ,Direct,2025-12-15
+250,Customer 250,SMB,Professional Services,UT,Direct,2023-06-09
+251,Customer 251,Mid-Market,Education,FL,E-commerce,2025-05-31
+252,Customer 252,SMB,Healthcare,NY,Direct,2023-09-09
+253,Customer 253,Enterprise,Hospitality,WA,E-commerce,2025-06-29
+254,Customer 254,SMB,Healthcare,CO,E-commerce,2025-01-02
+255,Customer 255,Enterprise,Hospitality,AZ,Direct,2023-08-20
+256,Customer 256,SMB,Manufacturing,IL,E-commerce,2024-05-03
+257,Customer 257,Mid-Market,Healthcare,FL,Partner,2022-05-19
+258,Customer 258,Retail,Professional Services,WA,Partner,2022-03-31
+259,Customer 259,SMB,Manufacturing,NY,E-commerce,2022-02-03
+260,Customer 260,Mid-Market,Healthcare,GA,Direct,2025-09-07
+261,Customer 261,SMB,Manufacturing,TX,Direct,2023-12-23
+262,Customer 262,SMB,Education,MA,Partner,2025-11-25
+263,Customer 263,SMB,Education,TX,Direct,2026-01-06
+264,Customer 264,Retail,Real Estate,CA,Partner,2023-02-17
+265,Customer 265,Enterprise,Hospitality,CA,Partner,2023-09-28
+266,Customer 266,SMB,Real Estate,NY,Direct,2025-08-17
+267,Customer 267,Mid-Market,Manufacturing,CA,E-commerce,2023-11-11
+268,Customer 268,Mid-Market,Manufacturing,WA,Partner,2024-06-19
+269,Customer 269,Retail,Technology,GA,Direct,2024-10-13
+270,Customer 270,SMB,Manufacturing,FL,Partner,2022-06-19
+271,Customer 271,SMB,Healthcare,WA,E-commerce,2023-01-05
+272,Customer 272,SMB,Manufacturing,UT,Direct,2023-11-03
+273,Customer 273,SMB,Retail,CO,E-commerce,2026-01-09
+274,Customer 274,SMB,Real Estate,GA,Partner,2022-03-28
+275,Customer 275,SMB,Manufacturing,NJ,Partner,2023-07-17
+276,Customer 276,SMB,Professional Services,UT,E-commerce,2025-07-29
+277,Customer 277,SMB,Education,CA,Direct,2025-05-29
+278,Customer 278,SMB,Real Estate,CA,Direct,2022-05-18
+279,Customer 279,Mid-Market,Manufacturing,GA,Partner,2025-03-07
+280,Customer 280,Enterprise,Education,MA,Partner,2024-01-30
+281,Customer 281,Mid-Market,Healthcare,NJ,Direct,2024-12-20
+282,Customer 282,Mid-Market,Manufacturing,MA,Partner,2023-05-27
+283,Customer 283,Retail,Professional Services,AZ,Direct,2024-10-19
+284,Customer 284,SMB,Healthcare,NY,Partner,2025-12-12
+285,Customer 285,SMB,Retail,AZ,Partner,2023-02-14
+286,Customer 286,Enterprise,Healthcare,CO,Direct,2025-12-31
+287,Customer 287,SMB,Healthcare,MA,Partner,2025-09-29
+288,Customer 288,Mid-Market,Healthcare,FL,E-commerce,2023-08-18
+289,Customer 289,Retail,Education,AZ,E-commerce,2025-12-05
+290,Customer 290,SMB,Manufacturing,FL,Direct,2022-09-06
+291,Customer 291,Retail,Education,IL,Partner,2022-02-23
+292,Customer 292,Mid-Market,Manufacturing,CO,E-commerce,2022-09-23
+293,Customer 293,SMB,Healthcare,UT,Partner,2024-03-26
+294,Customer 294,Retail,Real Estate,FL,Partner,2024-04-18
+295,Customer 295,Retail,Healthcare,TX,Partner,2025-08-08
+296,Customer 296,Enterprise,Real Estate,MA,E-commerce,2023-12-07
+297,Customer 297,Enterprise,Education,TX,Partner,2024-10-26
+298,Customer 298,Retail,Professional Services,UT,E-commerce,2022-11-10
+299,Customer 299,Mid-Market,Education,GA,E-commerce,2023-04-07
+300,Customer 300,Mid-Market,Retail,UT,Partner,2023-02-07

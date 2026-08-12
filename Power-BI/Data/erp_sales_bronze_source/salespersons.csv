@@ -1,0 +1,19 @@
+salesperson_id,salesperson_name,location_id,job_title,status
+SP001,Salesperson 01,LOC001,Account Executive,Active
+SP002,Salesperson 02,LOC001,Account Executive,Active
+SP003,Salesperson 03,LOC001,Account Executive,Active
+SP004,Salesperson 04,LOC002,Account Executive,Active
+SP005,Salesperson 05,LOC002,Account Executive,Active
+SP006,Salesperson 06,LOC002,Account Executive,Active
+SP007,Salesperson 07,LOC003,Account Executive,Active
+SP008,Salesperson 08,LOC003,Account Executive,Active
+SP009,Salesperson 09,LOC003,Account Executive,Active
+SP010,Salesperson 10,LOC004,Account Executive,Active
+SP011,Salesperson 11,LOC004,Account Executive,Active
+SP012,Salesperson 12,LOC004,Account Executive,Active
+SP013,Salesperson 13,LOC005,Account Executive,Active
+SP014,Salesperson 14,LOC005,Account Executive,Active
+SP015,Salesperson 15,LOC005,Account Executive,Active
+SP016,Salesperson 16,LOC006,Account Executive,Active
+SP017,Salesperson 17,LOC006,Account Executive,Active
+SP018,Salesperson 18,LOC006,Account Executive,Active

@@ -1,0 +1,9 @@
+file_name,row_count
+customers.csv,300
+items.csv,100
+locations.csv,6
+salespersons.csv,18
+sales_headers.csv,16716
+sales_lines.csv,27527
+inventory_ledger_entries.csv,51095
+sales_budgets.csv,186

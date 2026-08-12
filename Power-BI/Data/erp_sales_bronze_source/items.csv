@@ -1,0 +1,101 @@
+item_id,item_name,category,subcategory,list_price,standard_cost,tier,status
+ITEM0001,Desk 01,Office Furniture,Desk,621.88,302.24,Premium,Active
+ITEM0002,Desk 02,Office Furniture,Desk,262.85,134.97,Standard,Active
+ITEM0003,Desk 03,Office Furniture,Desk,655.8,455.21,Standard,Active
+ITEM0004,Desk 04,Office Furniture,Desk,577.35,281.53,Standard,Active
+ITEM0005,Desk 05,Office Furniture,Desk,238.96,143.68,Standard,Active
+ITEM0006,Chair 01,Office Furniture,Chair,550.73,358.99,Value,Active
+ITEM0007,Chair 02,Office Furniture,Chair,535.9,285.58,Value,Active
+ITEM0008,Chair 03,Office Furniture,Chair,293.15,201.87,Standard,Active
+ITEM0009,Chair 04,Office Furniture,Chair,675.31,379.29,Standard,Active
+ITEM0010,Chair 05,Office Furniture,Chair,235.94,156.48,Standard,Active
+ITEM0011,Storage 01,Office Furniture,Storage,124.4,62.6,Premium,Active
+ITEM0012,Storage 02,Office Furniture,Storage,589.39,397.08,Value,Active
+ITEM0013,Storage 03,Office Furniture,Storage,458.08,233.6,Premium,Active
+ITEM0014,Storage 04,Office Furniture,Storage,111.71,61.48,Value,Active
+ITEM0015,Storage 05,Office Furniture,Storage,602.85,414.04,Value,Active
+ITEM0016,Conference Table 01,Office Furniture,Conference Table,214.98,106.78,Value,Active
+ITEM0017,Conference Table 02,Office Furniture,Conference Table,247.39,135.93,Standard,Active
+ITEM0018,Conference Table 03,Office Furniture,Conference Table,818.34,562.98,Premium,Active
+ITEM0019,Conference Table 04,Office Furniture,Conference Table,292.96,185.32,Premium,Active
+ITEM0020,Conference Table 05,Office Furniture,Conference Table,188.02,106.28,Value,Active
+ITEM0021,Pendant 01,Lighting,Pendant,282.95,199.42,Value,Active
+ITEM0022,Pendant 02,Lighting,Pendant,104.98,66.39,Value,Active
+ITEM0023,Pendant 03,Lighting,Pendant,703.51,365.27,Premium,Active
+ITEM0024,Pendant 04,Lighting,Pendant,285.65,200.55,Value,Active
+ITEM0025,Pendant 05,Lighting,Pendant,546.82,352.32,Standard,Active
+ITEM0026,Floor Lamp 01,Lighting,Floor Lamp,248.43,121.16,Premium,Active
+ITEM0027,Floor Lamp 02,Lighting,Floor Lamp,405.06,200.86,Value,Active
+ITEM0028,Floor Lamp 03,Lighting,Floor Lamp,837.49,465.24,Value,Active
+ITEM0029,Floor Lamp 04,Lighting,Floor Lamp,494.3,342.22,Value,Active
+ITEM0030,Floor Lamp 05,Lighting,Floor Lamp,457.56,248.72,Standard,Active
+ITEM0031,Desk Lamp 01,Lighting,Desk Lamp,717.94,437.48,Value,Active
+ITEM0032,Desk Lamp 02,Lighting,Desk Lamp,571.97,397.79,Premium,Active
+ITEM0033,Desk Lamp 03,Lighting,Desk Lamp,369.42,265.75,Standard,Active
+ITEM0034,Desk Lamp 04,Lighting,Desk Lamp,503.67,252.75,Standard,Active
+ITEM0035,Desk Lamp 05,Lighting,Desk Lamp,823.6,425.54,Standard,Active
+ITEM0036,Wall Light 01,Lighting,Wall Light,760.79,442.26,Standard,Active
+ITEM0037,Wall Light 02,Lighting,Wall Light,390.14,243.06,Premium,Active
+ITEM0038,Wall Light 03,Lighting,Wall Light,521.49,371.85,Standard,Active
+ITEM0039,Wall Light 04,Lighting,Wall Light,659.06,334.47,Value,Active
+ITEM0040,Wall Light 05,Lighting,Wall Light,723.3,480.61,Premium,Active
+ITEM0041,Mirror 01,Home Decor,Mirror,141.51,82.69,Premium,Active
+ITEM0042,Mirror 02,Home Decor,Mirror,42.95,28.06,Value,Active
+ITEM0043,Mirror 03,Home Decor,Mirror,279.68,167.85,Standard,Active
+ITEM0044,Mirror 04,Home Decor,Mirror,501.99,253.78,Value,Active
+ITEM0045,Mirror 05,Home Decor,Mirror,311.58,197.34,Value,Active
+ITEM0046,Rug 01,Home Decor,Rug,221.01,125.92,Standard,Active
+ITEM0047,Rug 02,Home Decor,Rug,530.83,353.99,Value,Active
+ITEM0048,Rug 03,Home Decor,Rug,875.83,546.3,Premium,Active
+ITEM0049,Rug 04,Home Decor,Rug,57.72,40.58,Premium,Active
+ITEM0050,Rug 05,Home Decor,Rug,257.9,138.7,Value,Active
+ITEM0051,Artwork 01,Home Decor,Artwork,901.72,451.36,Premium,Active
+ITEM0052,Artwork 02,Home Decor,Artwork,782.58,559.32,Value,Active
+ITEM0053,Artwork 03,Home Decor,Artwork,736.91,376.42,Premium,Active
+ITEM0054,Artwork 04,Home Decor,Artwork,901.63,468.51,Value,Active
+ITEM0055,Artwork 05,Home Decor,Artwork,833.91,484.96,Standard,Active
+ITEM0056,Decor Accent 01,Home Decor,Decor Accent,885.31,585.42,Value,Active
+ITEM0057,Decor Accent 02,Home Decor,Decor Accent,223.05,123.75,Value,Active
+ITEM0058,Decor Accent 03,Home Decor,Decor Accent,631.39,369.45,Value,Active
+ITEM0059,Decor Accent 04,Home Decor,Decor Accent,450.85,243.23,Standard,Active
+ITEM0060,Decor Accent 05,Home Decor,Decor Accent,347.66,215.96,Standard,Active
+ITEM0061,Patio Chair 01,Outdoor,Patio Chair,575.48,277.22,Value,Active
+ITEM0062,Patio Chair 02,Outdoor,Patio Chair,614.3,328.62,Standard,Active
+ITEM0063,Patio Chair 03,Outdoor,Patio Chair,822.27,408.67,Standard,Active
+ITEM0064,Patio Chair 04,Outdoor,Patio Chair,293.41,175.02,Value,Active
+ITEM0065,Patio Chair 05,Outdoor,Patio Chair,160.4,113.01,Value,Active
+ITEM0066,Outdoor Table 01,Outdoor,Outdoor Table,564.35,303.8,Premium,Active
+ITEM0067,Outdoor Table 02,Outdoor,Outdoor Table,774.82,407.32,Standard,Active
+ITEM0068,Outdoor Table 03,Outdoor,Outdoor Table,639.67,361.43,Premium,Active
+ITEM0069,Outdoor Table 04,Outdoor,Outdoor Table,464.99,304.56,Value,Active
+ITEM0070,Outdoor Table 05,Outdoor,Outdoor Table,634.64,403.05,Standard,Active
+ITEM0071,Planter 01,Outdoor,Planter,406.39,228.16,Standard,Active
+ITEM0072,Planter 02,Outdoor,Planter,266.28,139.97,Premium,Active
+ITEM0073,Planter 03,Outdoor,Planter,167.57,87.81,Premium,Active
+ITEM0074,Planter 04,Outdoor,Planter,267.32,187.55,Premium,Active
+ITEM0075,Planter 05,Outdoor,Planter,775.3,531.42,Standard,Active
+ITEM0076,Umbrella 01,Outdoor,Umbrella,86.04,61.93,Standard,Active
+ITEM0077,Umbrella 02,Outdoor,Umbrella,921.79,647.4,Standard,Active
+ITEM0078,Umbrella 03,Outdoor,Umbrella,191.34,114.14,Standard,Active
+ITEM0079,Umbrella 04,Outdoor,Umbrella,826.83,575.96,Standard,Active
+ITEM0080,Umbrella 05,Outdoor,Umbrella,384.87,275.75,Premium,Active
+ITEM0081,Organizer 01,Accessories,Organizer,883.13,590.31,Premium,Active
+ITEM0082,Organizer 02,Accessories,Organizer,424.94,301.6,Value,Active
+ITEM0083,Organizer 03,Accessories,Organizer,642.3,383.33,Standard,Active
+ITEM0084,Organizer 04,Accessories,Organizer,310.0,220.87,Value,Active
+ITEM0085,Organizer 05,Accessories,Organizer,709.52,350.95,Premium,Active
+ITEM0086,Mat 01,Accessories,Mat,92.02,57.07,Value,Active
+ITEM0087,Mat 02,Accessories,Mat,876.64,532.53,Standard,Active
+ITEM0088,Mat 03,Accessories,Mat,914.31,456.45,Standard,Active
+ITEM0089,Mat 04,Accessories,Mat,102.35,50.8,Standard,Active
+ITEM0090,Mat 05,Accessories,Mat,407.44,287.65,Value,Active
+ITEM0091,Clock 01,Accessories,Clock,264.06,164.43,Value,Active
+ITEM0092,Clock 02,Accessories,Clock,114.6,73.09,Value,Active
+ITEM0093,Clock 03,Accessories,Clock,515.73,363.24,Standard,Active
+ITEM0094,Clock 04,Accessories,Clock,649.45,360.71,Premium,Active
+ITEM0095,Clock 05,Accessories,Clock,400.17,256.59,Premium,Active
+ITEM0096,Basket 01,Accessories,Basket,456.07,320.6,Standard,Active
+ITEM0097,Basket 02,Accessories,Basket,48.48,30.5,Value,Active
+ITEM0098,Basket 03,Accessories,Basket,946.45,470.94,Standard,Active
+ITEM0099,Basket 04,Accessories,Basket,500.36,256.08,Premium,Active
+ITEM0100,Basket 05,Accessories,Basket,841.59,581.56,Premium,Active
