@@ -1,0 +1,65 @@
+table fact_sales_target
+	lineageTag: 9acf9d58-6206-4dd5-924d-cf20e2314f88
+
+	column YearMonthKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 96fad85e-10c8-4a12-8d36-0edee4ffe439
+		summarizeBy: none
+		sourceColumn: YearMonthKey
+
+		annotation SummarizationSetBy = User
+
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: ce5abe0d-de3c-442a-be58-55d7b9b9a3d0
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 51fc53eb-77c4-4c44-b85d-03a17ba7aecc
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = User
+
+	column SalesTarget
+		dataType: decimal
+		isHidden
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 50b03868-5651-4cc3-a9b9-a1c39e760a16
+		summarizeBy: none
+		sourceColumn: SalesTarget
+
+		annotation SummarizationSetBy = User
+
+	partition fact_sales_target = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\fact_sales_target.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"YearMonthKey", Int64.Type},
+				            {"MonthStart", type date},
+				            {"LocationKey", Int64.Type},
+				            {"SalesTarget", Currency.Type}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

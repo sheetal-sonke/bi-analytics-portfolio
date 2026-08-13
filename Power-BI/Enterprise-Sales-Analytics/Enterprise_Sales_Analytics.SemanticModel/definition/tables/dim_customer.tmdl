@@ -1,0 +1,87 @@
+table dim_customer
+	lineageTag: 1fd29b4d-b1ba-49d8-bcef-3426f9a5b204
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 957f6bf7-a4fd-4eb1-ad9d-18b4bcb57e91
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = User
+
+	column CustomerName
+		dataType: string
+		lineageTag: ba10cc56-f045-492b-8de5-e7bd12cf5dd1
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = User
+
+	column Segment
+		dataType: string
+		lineageTag: cc845794-8e43-4b0c-aa2e-9f87b6cf22c4
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = User
+
+	column Industry
+		dataType: string
+		lineageTag: 1290af17-737c-4c06-bca7-d487dcc551fc
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = User
+
+	column State
+		dataType: string
+		lineageTag: ed961a4e-b143-4b48-ac25-d772aceddf67
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = User
+
+	column AcquisitionChannel
+		dataType: string
+		lineageTag: f9ae5c3b-7083-4cf1-9ac1-4ebafc26c93c
+		summarizeBy: none
+		sourceColumn: AcquisitionChannel
+
+		annotation SummarizationSetBy = User
+
+	column CustomerSince
+		dataType: dateTime
+		formatString: dd MMM yyyy
+		lineageTag: e8c6542d-86cb-4469-ba62-6fe846178b14
+		summarizeBy: none
+		sourceColumn: CustomerSince
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\dim_customer.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"CustomerKey", Int64.Type},
+				            {"CustomerName", type text},
+				            {"Segment", type text},
+				            {"Industry", type text},
+				            {"State", type text},
+				            {"AcquisitionChannel", type text},
+				            {"CustomerSince", type date}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

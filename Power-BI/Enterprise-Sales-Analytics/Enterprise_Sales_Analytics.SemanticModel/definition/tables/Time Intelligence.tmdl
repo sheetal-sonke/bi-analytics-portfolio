@@ -1,0 +1,45 @@
+/// Time Intelligence calculation group. One set of items applies to every measure,
+/// instead of writing a PY / YoY / YTD variant of each one by hand.
+table 'Time Intelligence'
+	lineageTag: 0d63fa45-eeeb-4d46-aa17-222b013b743b
+
+	calculationGroup
+		precedence: 10
+
+		calculationItem Current = SELECTEDMEASURE ( )
+
+		calculationItem PY = CALCULATE ( SELECTEDMEASURE ( ), SAMEPERIODLASTYEAR ( dim_date[Date] ) )
+
+		calculationItem YoY =
+				SELECTEDMEASURE ( )
+				    - CALCULATE ( SELECTEDMEASURE ( ), SAMEPERIODLASTYEAR ( dim_date[Date] ) )
+
+		calculationItem 'YoY %' =
+				VAR Cur = SELECTEDMEASURE ( )
+				VAR Prior =
+				    CALCULATE ( SELECTEDMEASURE ( ), SAMEPERIODLASTYEAR ( dim_date[Date] ) )
+				RETURN
+				    DIVIDE ( Cur - Prior, Prior )
+
+			formatStringDefinition = "0.0%;-0.0%;0.0%"
+
+		calculationItem YTD = CALCULATE ( SELECTEDMEASURE ( ), DATESYTD ( dim_date[Date] ) )
+
+	column 'Time Calculation'
+		dataType: string
+		lineageTag: ae5976fa-91ed-4d95-96a0-be2a894cb585
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: d4e2d682-0bf8-4994-8982-7a7bb5171f1b
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

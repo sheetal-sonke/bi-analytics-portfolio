@@ -1,0 +1,109 @@
+table fact_inventory
+	lineageTag: 33a73f77-8271-4794-a155-d22f5ea12470
+
+	column YearMonthKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: adddbcc9-3f61-4559-bfdd-f62df843cb8e
+		summarizeBy: none
+		sourceColumn: YearMonthKey
+
+		annotation SummarizationSetBy = User
+
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: 7916e07d-a4d4-4659-a9e1-8ed3e45bd734
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 1835f7ac-41c4-439d-8c62-19d683247316
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = User
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 6f735995-1ce3-4fbe-8dca-d3e35a8d88e0
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = User
+
+	column UnitsOnHand
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 1c5abd4a-c1a2-49f3-98c9-cca66811ef57
+		summarizeBy: none
+		sourceColumn: UnitsOnHand
+
+		annotation SummarizationSetBy = User
+
+	column ReorderPoint
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: d594c1f9-fcec-4887-800b-5b12ba4baa57
+		summarizeBy: none
+		sourceColumn: ReorderPoint
+
+		annotation SummarizationSetBy = User
+
+	column SafetyStock
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 3665c398-d31d-4e73-8a6f-9930f55bda67
+		summarizeBy: none
+		sourceColumn: SafetyStock
+
+		annotation SummarizationSetBy = User
+
+	column InventoryValue
+		dataType: decimal
+		isHidden
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: a2cc0120-b2e0-4258-b7d4-c05018bb8069
+		summarizeBy: none
+		sourceColumn: InventoryValue
+
+		annotation SummarizationSetBy = User
+
+	partition fact_inventory = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\fact_inventory.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"YearMonthKey", Int64.Type},
+				            {"MonthStart", type date},
+				            {"ProductKey", Int64.Type},
+				            {"LocationKey", Int64.Type},
+				            {"UnitsOnHand", Int64.Type},
+				            {"ReorderPoint", Int64.Type},
+				            {"SafetyStock", Int64.Type},
+				            {"InventoryValue", Currency.Type}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

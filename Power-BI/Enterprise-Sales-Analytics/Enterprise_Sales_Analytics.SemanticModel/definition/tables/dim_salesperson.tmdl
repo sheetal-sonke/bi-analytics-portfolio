@@ -1,0 +1,59 @@
+table dim_salesperson
+	lineageTag: 7ba0b91b-7dd4-40bf-a33c-f81433edd17d
+
+	column SalespersonKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 7418880f-3f24-4eff-9f01-d9a5a5a982bd
+		summarizeBy: none
+		sourceColumn: SalespersonKey
+
+		annotation SummarizationSetBy = User
+
+	column SalespersonName
+		dataType: string
+		lineageTag: 1cb783bd-9eeb-42ff-a719-b25444faf3b6
+		summarizeBy: none
+		sourceColumn: SalespersonName
+
+		annotation SummarizationSetBy = User
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: e5863d74-1759-4a01-b0f1-351c9d9f1ec9
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = User
+
+	column Role
+		dataType: string
+		lineageTag: 8b5169cd-590f-47b3-9a7a-c443edacb632
+		summarizeBy: none
+		sourceColumn: Role
+
+		annotation SummarizationSetBy = User
+
+	partition dim_salesperson = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\dim_salesperson.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"SalespersonKey", Int64.Type},
+				            {"SalespersonName", type text},
+				            {"LocationKey", Int64.Type},
+				            {"Role", type text}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

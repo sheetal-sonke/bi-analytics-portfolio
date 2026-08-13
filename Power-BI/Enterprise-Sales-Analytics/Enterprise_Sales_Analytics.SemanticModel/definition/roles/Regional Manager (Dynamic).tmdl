@@ -1,0 +1,23 @@
+/// DYNAMIC ROLE: one role covers every manager, and adding a person is a row in
+/// dim_security rather than a model change. USERPRINCIPALNAME() returns the signed-in
+/// user in the Service. In Desktop use View as > Other user with a UPN from
+/// dim_security, e.g. central.manager@journeyteam.com, ticking this role.
+/// national.director@journeyteam.com maps to all six regions and so sees everything
+/// without needing a separate role. dim_security is deliberately unrelated to the
+/// rest of the model: the IN predicate reads it directly, so it never participates in
+/// filter propagation and cannot create an ambiguous path.
+role 'Regional Manager (Dynamic)'
+	modelPermission: read
+
+	tablePermission dim_location =
+			dim_location[Region] IN
+			    SELECTCOLUMNS (
+			        FILTER (
+			            dim_security,
+			            dim_security[UserPrincipalName] = USERPRINCIPALNAME ()
+			        ),
+			        "Region", dim_security[Region]
+			    )
+
+	annotation PBI_Id = 1819a8702b2d4120bf8311211f3ae047
+

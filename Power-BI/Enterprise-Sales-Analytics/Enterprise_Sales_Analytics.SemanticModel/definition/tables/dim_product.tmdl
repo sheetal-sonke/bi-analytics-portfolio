@@ -1,0 +1,95 @@
+table dim_product
+	lineageTag: 6d50c82f-6891-44d3-9812-b9e5dc20509f
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 592bffcc-cca4-4828-ab90-0f3e1a794c9b
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = User
+
+	column ProductName
+		dataType: string
+		lineageTag: 14fcc3b1-d5f9-4998-89c9-29ecf776b94c
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = User
+
+	column Category
+		dataType: string
+		lineageTag: c13e7796-30ce-4b39-b4df-451098c67025
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = User
+
+	column Subcategory
+		dataType: string
+		lineageTag: de6f7098-17ed-4925-978e-19ca740ca24c
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = User
+
+	column ListPrice
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: d9ecd405-b565-4b73-b39b-978c1842f5db
+		summarizeBy: none
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = User
+
+	column StandardCost
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: ff8f013c-99fd-4e0e-b393-d265aa9bf4a0
+		summarizeBy: none
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = User
+
+	column Tier
+		dataType: string
+		lineageTag: d6076706-104c-4806-8aea-4865aa932593
+		summarizeBy: none
+		sourceColumn: Tier
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: ba54bc20-b955-450a-b484-3793d2f5e02f
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	partition dim_product = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\dim_product.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"ProductKey", Int64.Type},
+				            {"ProductName", type text},
+				            {"Category", type text},
+				            {"Subcategory", type text},
+				            {"ListPrice", Currency.Type},
+				            {"StandardCost", Currency.Type},
+				            {"Tier", type text},
+				            {"Status", type text}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

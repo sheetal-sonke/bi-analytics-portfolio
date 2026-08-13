@@ -1,0 +1,36 @@
+table target_measures
+	lineageTag: e94f9215-1ef4-41ce-834e-aa18bc4c988a
+
+	/// Grain is month x location. No product, customer or salesperson key, so those slicers
+	/// deliberately do not filter it.
+	measure 'Sales Target' = SUM ( fact_sales_target[SalesTarget] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: bbf40e76-bf1a-437c-a35e-8f0b7c383b20
+
+	measure 'Target Attainment %' = DIVIDE ( [Total Revenue], [Sales Target] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: d30d29c5-97af-4dd4-8140-9386e63b0890
+
+	measure 'Target Variance' = [Total Revenue] - [Sales Target]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ae83f6a1-db38-4a5d-b543-0aa0eec6144d
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: d03793af-3582-4933-bfa9-df3b57ac2b60
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition target_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

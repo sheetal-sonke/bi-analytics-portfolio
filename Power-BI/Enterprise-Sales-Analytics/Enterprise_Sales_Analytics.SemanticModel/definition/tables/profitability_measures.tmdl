@@ -1,0 +1,34 @@
+table profitability_measures
+	lineageTag: 6f1abbfa-3da4-4bb3-ae45-f07482f04d64
+
+	measure 'Gross Profit' = SUM ( fact_sales[GrossProfit] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 9065ad26-c575-41e2-bb43-3e0725317e24
+
+	measure 'Total COGS' = SUM ( fact_sales[COGS] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 6744fae0-5e7a-44fc-930e-ba84f16407ec
+
+	measure 'Gross Margin %' = DIVIDE ( [Gross Profit], [Total Revenue] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 6bdd9a3b-ce69-4259-91bd-f4e6ac586500
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: 42c70823-9448-4964-b3dc-c4a0c255af39
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition profitability_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

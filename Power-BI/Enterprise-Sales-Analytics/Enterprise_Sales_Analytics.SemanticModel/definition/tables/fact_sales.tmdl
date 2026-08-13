@@ -1,0 +1,151 @@
+table fact_sales
+	lineageTag: 1ad30c0d-2cbd-4c65-8d77-74e95b1a4f88
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 6e86f707-c65e-4446-a00a-339075d2a8f4
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column OrderNumber
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 8fcfe396-6a42-4a57-a765-88d4a054b0c1
+		summarizeBy: none
+		sourceColumn: OrderNumber
+
+		annotation SummarizationSetBy = User
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 43eb0bb9-56e5-4b59-aa6f-dbf018725f1f
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = User
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: ad727738-926d-4eca-a1c1-1c5905978ac9
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = User
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: ec58edcd-3b68-4ef5-823d-4194f63a0577
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = User
+
+	column SalespersonKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 1475c54e-9d39-48ee-ab31-1f3f1fbad192
+		summarizeBy: none
+		sourceColumn: SalespersonKey
+
+		annotation SummarizationSetBy = User
+
+	column Quantity
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: b2b0b528-aec5-4cb6-8544-5821fefc7b84
+		summarizeBy: none
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = User
+
+	column UnitPrice
+		dataType: decimal
+		isHidden
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 596dc886-64e0-45ed-b540-7087f2d494e0
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = User
+
+	column DiscountPct
+		dataType: double
+		isHidden
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 7d5dba7c-dc74-4780-9732-93f6f52c45a6
+		summarizeBy: none
+		sourceColumn: DiscountPct
+
+		annotation SummarizationSetBy = User
+
+	column Revenue
+		dataType: decimal
+		isHidden
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: b665db51-278c-4866-916c-346feafd290c
+		summarizeBy: none
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = User
+
+	column COGS
+		dataType: decimal
+		isHidden
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 5b78a5f4-a8d7-4d18-8591-841f2933ed3e
+		summarizeBy: none
+		sourceColumn: COGS
+
+		annotation SummarizationSetBy = User
+
+	column GrossProfit
+		dataType: decimal
+		isHidden
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: cd90b4b6-c776-433b-b46c-f535415fcf27
+		summarizeBy: none
+		sourceColumn: GrossProfit
+
+		annotation SummarizationSetBy = User
+
+	partition fact_sales = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\fact_sales.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"DateKey", Int64.Type},
+				            {"OrderNumber", Int64.Type},
+				            {"ProductKey", Int64.Type},
+				            {"CustomerKey", Int64.Type},
+				            {"LocationKey", Int64.Type},
+				            {"SalespersonKey", Int64.Type},
+				            {"Quantity", Int64.Type},
+				            {"UnitPrice", Currency.Type},
+				            {"DiscountPct", type number},
+				            {"Revenue", Currency.Type},
+				            {"COGS", Currency.Type},
+				            {"GrossProfit", Currency.Type}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

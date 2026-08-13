@@ -1,0 +1,16 @@
+/// Row-level security. Both roles filter dim_location, not the fact tables. One
+/// predicate on a six-row dimension propagates through relationships to fact_sales,
+/// fact_sales_target and fact_inventory, so revenue, targets and inventory restrict
+/// together and Target Attainment % stays correct because numerator and denominator
+/// filter as a pair. Filtering the facts instead would need three rules, evaluate
+/// over millions of rows rather than six, and risk the three drifting apart.
+/// STATIC ROLE, for a one-click demo: Modeling > View as > Regional Manager - West.
+/// Total Revenue falls 56,791,117 -> 12,799,978 and the Location Scope chip changes
+/// from "All locations" to "West Hub".
+role 'Regional Manager - West'
+	modelPermission: read
+
+	tablePermission dim_location = dim_location[Region] = "West"
+
+	annotation PBI_Id = 68bc16fa5b714bd887c47734e36899ef
+

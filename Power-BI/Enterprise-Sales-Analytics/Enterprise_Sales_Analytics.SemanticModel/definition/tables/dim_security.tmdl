@@ -1,0 +1,35 @@
+/// Maps a signed-in user to the regions they may see. Drives the dynamic RLS role.
+/// Adding a manager is a data change, not a model change.
+table dim_security
+	isHidden
+	lineageTag: 03d8d26b-16be-4271-b265-d9acb008c142
+
+	column UserPrincipalName
+		dataType: string
+		lineageTag: 20820132-b746-410c-bc92-a79150e047a1
+		summarizeBy: none
+		sourceColumn: UserPrincipalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 08a67d03-4c0c-4566-91d5-fdbb3e9bb09e
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_security = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(
+				        {{"west.manager@journeyteam.com", "West"}, {"central.manager@journeyteam.com", "Central"}, {"east.manager@journeyteam.com", "East"}, {"midwest.manager@journeyteam.com", "Midwest"}, {"mountain.manager@journeyteam.com", "Mountain"}, {"southeast.manager@journeyteam.com", "Southeast"}, {"national.director@journeyteam.com", "West"}, {"national.director@journeyteam.com", "Central"}, {"national.director@journeyteam.com", "East"}, {"national.director@journeyteam.com", "Midwest"}, {"national.director@journeyteam.com", "Mountain"}, {"national.director@journeyteam.com", "Southeast"}},
+				        type table [UserPrincipalName = text, Region = text]
+				    )
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

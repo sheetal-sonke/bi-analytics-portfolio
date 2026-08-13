@@ -1,0 +1,123 @@
+table narrative_measures
+	lineageTag: 2c41e212-9f80-4d71-801b-b59b17937975
+
+	/// Written narrative, evaluated at query time. It is a measure, not typed text, so it stays
+	/// true through every refresh and re-states itself under any slicer or cross-filter.
+	measure 'Executive Takeaway' =
+			VAR Rev = [Revenue YTD]
+			VAR YoY = [Revenue YTD YoY %]
+			VAR Att = [Target Attainment %]
+			VAR GM  = [Gross Margin %]
+			VAR LocAttainment =
+			    ADDCOLUMNS (
+			        VALUES ( dim_location[LocationName] ),
+			        "@Attainment", [Target Attainment %]
+			    )
+			VAR Ranked = FILTER ( LocAttainment, NOT ISBLANK ( [@Attainment] ) )
+			VAR BestRow = TOPN ( 1, Ranked, [@Attainment], DESC )
+			VAR WorstRow = TOPN ( 1, Ranked, [@Attainment], ASC )
+			VAR BestName = MAXX ( BestRow, dim_location[LocationName] )
+			VAR BestAtt = MAXX ( BestRow, [@Attainment] )
+			VAR WorstName = MAXX ( WorstRow, dim_location[LocationName] )
+			VAR WorstAtt = MAXX ( WorstRow, [@Attainment] )
+			VAR Headline =
+			    "YTD revenue is " & FORMAT ( Rev, "$#,0,,.0M" ) & ", "
+			        & IF ( YoY >= 0, "up ", "down " ) & FORMAT ( ABS ( YoY ), "0.0%" )
+			        & " on the comparable prior-year period and tracking at "
+			        & FORMAT ( Att, "0.0%" ) & " of target. Gross margin is "
+			        & FORMAT ( GM, "0.0%" ) & "."
+			VAR Spread =
+			    IF (
+			        NOT ISBLANK ( BestName ) && BestName <> WorstName,
+			        " Attainment varies widely by location: " & BestName & " is at "
+			            & FORMAT ( BestAtt, "0.0%" ) & " while " & WorstName & " sits at "
+			            & FORMAT ( WorstAtt, "0.0%" ) & ".",
+			        ""
+			    )
+			VAR Verdict =
+			    SWITCH (
+			        TRUE (),
+			        Att > 1.2, " Plan sits materially below realised demand, so this reads as a target-setting issue as much as a performance win.",
+			        Att >= 1, " Performance is at or ahead of plan.",
+			        Att >= 0.9, " Performance is close to plan but behind.",
+			        " Performance is materially behind plan."
+			    )
+			RETURN
+			    IF ( ISBLANK ( Rev ), "No sales in the current selection.", Headline & Spread & Verdict )
+		lineageTag: a4b023ce-5eeb-438c-8f7a-d95f862213c1
+
+	/// Reads YTD through Jul 31, 2026 under the page filter, and rewrites itself to a date range if
+	/// the period changes.
+	measure 'Report Period' =
+			VAR FirstDay = MIN ( dim_date[Date] )
+			VAR LastDay = MAX ( dim_date[Date] )
+			VAR IsYearToDate = FirstDay = DATE ( YEAR ( LastDay ), 1, 1 )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ISBLANK ( LastDay ), "No period selected",
+			        IsYearToDate, "YTD through " & FORMAT ( LastDay, "MMM d, yyyy" ),
+			        FORMAT ( FirstDay, "MMM d, yyyy" ) & " to " & FORMAT ( LastDay, "MMM d, yyyy" )
+			    )
+		lineageTag: 10d8401c-0c4a-4d0b-82cb-82cb0451c804
+
+	/// Reflects slicer and RLS state. Under the West RLS role this reads West Hub rather than All
+	/// locations, which is a quick way to see security is applied.
+	measure 'Location Scope' =
+			VAR Selected = DISTINCTCOUNT ( dim_location[LocationName] )
+			VAR Available =
+			    CALCULATE ( DISTINCTCOUNT ( dim_location[LocationName] ), REMOVEFILTERS ( dim_location ) )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        Selected = 0, "No locations",
+			        Selected = Available, "All locations",
+			        Selected = 1, SELECTEDVALUE ( dim_location[LocationName] ),
+			        Selected & " of " & Available & " locations"
+			    )
+		lineageTag: 3796c10c-dd17-4bf6-b3c6-0695cfe91ba7
+
+	/// Display constant, held in the model so currency is stated in one place rather than typed
+	/// into each page.
+	measure 'Currency Label' = "USD"
+		lineageTag: 1f013074-cbc8-484f-9b62-277537d7f5ad
+
+	/// Derived from the snapshot the inventory measures actually resolve to, so the label can never
+	/// disagree with the numbers beneath it.
+	measure 'Inventory Snapshot Label' =
+			IF (
+			    ISBLANK ( [Latest Snapshot] ),
+			    "No inventory snapshot",
+			    "Inventory snapshot: " & FORMAT ( [Latest Snapshot], "MMM yyyy" )
+			)
+		lineageTag: 7d9d8786-ac6c-4215-8dbb-c636308e1752
+
+	measure 'Customer Scope' =
+			VAR N = [Customer Count]
+			RETURN IF ( ISBLANK ( N ), "No customers", FORMAT ( N, "#,0" ) & IF ( N = 1, " customer", " customers" ) )
+		lineageTag: 035840b9-2cc1-4e70-9414-92f55a8bc587
+
+	measure 'Product Scope' =
+			VAR N = [Product Count]
+			RETURN IF ( ISBLANK ( N ), "No products", FORMAT ( N, "#,0" ) & IF ( N = 1, " product", " products" ) )
+		lineageTag: 65ce7c8a-123a-4c1a-a870-e9b09259c58e
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: bccc0e83-d393-4049-80dd-477aa483b9ab
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition narrative_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

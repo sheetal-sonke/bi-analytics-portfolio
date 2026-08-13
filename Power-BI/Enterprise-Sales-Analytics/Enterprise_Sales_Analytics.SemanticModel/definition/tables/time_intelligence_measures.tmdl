@@ -1,0 +1,49 @@
+table time_intelligence_measures
+	lineageTag: 58e42561-1547-4bcb-9c91-f8913980ab2a
+
+	measure 'Revenue PY' = CALCULATE ( [Total Revenue], SAMEPERIODLASTYEAR ( dim_date[Date] ) )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 0a98b0a0-4d1c-4a47-a73b-e1fd3acc81d2
+
+	measure 'Revenue YoY Variance' = [Total Revenue] - [Revenue PY]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: d4f08633-04cd-4da0-9f60-5bf7d4f2d929
+
+	measure 'Revenue YoY %' = DIVIDE ( [Revenue YoY Variance], [Revenue PY] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 6c4f7f29-eb47-45db-990d-a788f2a41948
+
+	measure 'Revenue YTD' = TOTALYTD ( [Total Revenue], dim_date[Date] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ae10ebb2-7470-46a2-a03c-e93d13d3f24b
+
+	/// Comparable prior-year period, not full prior year: 1 Jan - 31 Jul 2025 = 12,460,400.
+	measure 'Revenue YTD PY' = CALCULATE ( [Revenue YTD], SAMEPERIODLASTYEAR ( dim_date[Date] ) )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 20660382-251a-4c1c-af79-cd07acdb6441
+
+	/// 8.2%. The honest growth number; Revenue YoY % compares part-year 2026 against full-year
+	/// 2025.
+	measure 'Revenue YTD YoY %' = DIVIDE ( [Revenue YTD] - [Revenue YTD PY], [Revenue YTD PY] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e3bc93bc-9b6b-4b0d-a030-fc0fd10709fe
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: 6804f099-8664-474f-b5f2-7c5090b37f7c
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition time_intelligence_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

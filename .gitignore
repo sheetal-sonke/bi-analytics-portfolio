@@ -20,3 +20,18 @@ __pycache__/
 
 # Local environment/config
 .env
+
+That's a good .gitignore already. Just append the three missing entries rather than replacing it:
+
+powershell
+Add-Content .gitignore @"
+
+# Power BI project - machine-bound credential signature, regenerates on open
+**/.pbi/localSettings.json
+
+# Analysis Services model backup
+*.abf
+
+# macOS, since the host is a Mac
+.DS_Store
+"@

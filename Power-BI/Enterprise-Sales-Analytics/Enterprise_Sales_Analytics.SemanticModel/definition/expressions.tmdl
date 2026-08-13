@@ -1,0 +1,9 @@
+/// Folder holding the eight source CSVs shipped alongside this project.
+expression DataFolder = "C:\Users\sheet\OneDrive\Desktop\BI-Portfolio\Power-BI\Data\enterprise_sales_analytics_dataset" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: adae44b5-bd3b-490a-8c93-9a61333368f1
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+

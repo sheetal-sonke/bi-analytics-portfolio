@@ -1,0 +1,39 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Parameters
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["DataFolder","dim_date","dim_customer","dim_product","dim_location","dim_salesperson","fact_sales","fact_sales_target","fact_inventory","dim_security","sales_measures","profitability_measures","target_measures","time_intelligence_measures","inventory_measures","narrative_measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_date
+ref table dim_customer
+ref table dim_product
+ref table dim_location
+ref table dim_salesperson
+ref table fact_sales
+ref table fact_sales_target
+ref table fact_inventory
+ref table dim_security
+ref table sales_measures
+ref table profitability_measures
+ref table target_measures
+ref table time_intelligence_measures
+ref table inventory_measures
+ref table narrative_measures
+ref table 'Time Intelligence'
+
+ref role 'Regional Manager - West'
+ref role 'Regional Manager (Dynamic)'
+

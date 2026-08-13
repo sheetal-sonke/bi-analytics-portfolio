@@ -1,0 +1,56 @@
+table sales_measures
+	lineageTag: 48d52fef-890f-4a00-bf5d-9d4ed949046f
+
+	/// All-time revenue. 56,791,116.63 unfiltered; 13,485,614 under Year = 2026.
+	measure 'Total Revenue' = SUM ( fact_sales[Revenue] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 1de6c9f3-1a56-49a8-939f-64171906ac07
+
+	measure 'Units Sold' = SUM ( fact_sales[Quantity] )
+		formatString: #,0
+		lineageTag: 90bc7e09-6a68-4ed2-b135-2d9a4165db66
+
+	measure 'Order Count' = DISTINCTCOUNT ( fact_sales[OrderNumber] )
+		formatString: #,0
+		lineageTag: c2208626-6f13-4e0b-95ba-8d728975bb9e
+
+	measure 'Average Order Value' = DIVIDE ( [Total Revenue], [Order Count] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 47a0d4c2-3c21-4137-89fa-eef62ec4e5b8
+
+	/// 300 distinct purchasers in 2026.
+	measure 'Customer Count' = DISTINCTCOUNT ( fact_sales[CustomerKey] )
+		formatString: #,0
+		lineageTag: 9aea63d8-7767-47e2-9a4e-ae40619d4d9b
+
+	/// Customer concentration. 5.3% across 300 customers is low: little churn risk, but no whale to
+	/// grow.
+	measure 'Top 8 Customer Share %' =
+			VAR Top8 =
+			    TOPN ( 8, ALLSELECTED ( dim_customer[CustomerKey] ), [Total Revenue], DESC )
+			VAR Top8Revenue =
+			    CALCULATE ( [Total Revenue], KEEPFILTERS ( Top8 ) )
+			RETURN
+			    DIVIDE ( Top8Revenue, CALCULATE ( [Total Revenue], ALLSELECTED ( dim_customer ) ) )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 93511efe-1eb1-415d-976c-19686617a84f
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: 45ad3980-5219-449c-8ef2-946532ee0b5b
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

@@ -1,7 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
   "pageOrder": [
+    "exec",
+    "sales",
+    "inv",
+    "tech",
     "6d33c4c12e18ac8aebca"
   ],
-  "activePageName": "6d33c4c12e18ac8aebca"
+  "activePageName": "exec"
 }

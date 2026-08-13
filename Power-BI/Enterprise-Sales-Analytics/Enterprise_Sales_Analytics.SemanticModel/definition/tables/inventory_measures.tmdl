@@ -1,0 +1,102 @@
+table inventory_measures
+	lineageTag: ea61612f-1722-4969-9179-68279ddd8330
+
+	/// fact_inventory is a monthly snapshot and therefore SEMI-ADDITIVE. Every measure below
+	/// collapses to the latest snapshot visible in the current filter context, so a date slicer
+	/// still works but months are never summed together.
+	measure 'Latest Snapshot' = MAX ( fact_inventory[MonthStart] )
+		formatString: dd MMM yyyy
+		lineageTag: e1f4a2e8-789f-49db-b39b-b408ab0ec89b
+
+	/// 12,338,824 at Jul 2026. A plain SUM returns 369,250,031, which is the same stock counted 31
+	/// times.
+	measure 'Inventory Value' =
+			VAR LastSnap = [Latest Snapshot]
+			RETURN
+			    CALCULATE (
+			        SUM ( fact_inventory[InventoryValue] ),
+			        fact_inventory[MonthStart] = LastSnap
+			    )
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ff763444-41d2-475f-a21b-3e9a224d820a
+
+	/// 38,943 at Jul 2026.
+	measure 'Units On Hand' =
+			VAR LastSnap = [Latest Snapshot]
+			RETURN
+			    CALCULATE (
+			        SUM ( fact_inventory[UnitsOnHand] ),
+			        fact_inventory[MonthStart] = LastSnap
+			    )
+		formatString: #,0
+		lineageTag: 8b31771a-ffc1-4585-952a-2497ee11a015
+
+	measure 'Product Count' =
+			VAR LastSnap = [Latest Snapshot]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( fact_inventory[ProductKey] ),
+			        fact_inventory[MonthStart] = LastSnap
+			    )
+		formatString: #,0
+		lineageTag: 1dc9dc21-45f2-44f5-826d-b9276c135f40
+
+	/// 22 distinct products. An additive version returns 905, which exceeds the 100-product
+	/// catalogue nine times over.
+	measure 'Products Below Reorder Point' =
+			VAR LastSnap = [Latest Snapshot]
+			VAR Breaches =
+			    FILTER (
+			        CALCULATETABLE ( fact_inventory, fact_inventory[MonthStart] = LastSnap ),
+			        fact_inventory[UnitsOnHand] < fact_inventory[ReorderPoint]
+			    )
+			RETURN
+			    COUNTROWS ( SUMMARIZE ( Breaches, fact_inventory[ProductKey] ) )
+		formatString: #,0
+		lineageTag: 1dd67a81-c247-40de-a2af-5c94b6aa7fe6
+
+	/// 25 product-location combinations, across 22 distinct products.
+	measure 'Reorder Breach Records' =
+			VAR LastSnap = [Latest Snapshot]
+			RETURN
+			    COUNTROWS (
+			        FILTER (
+			            CALCULATETABLE ( fact_inventory, fact_inventory[MonthStart] = LastSnap ),
+			            fact_inventory[UnitsOnHand] < fact_inventory[ReorderPoint]
+			        )
+			    )
+		formatString: #,0
+		lineageTag: 2c8a2941-f062-4ccc-9cf0-fd658c418808
+
+	/// 2.
+	measure 'Products Below Safety Stock' =
+			VAR LastSnap = [Latest Snapshot]
+			VAR Breaches =
+			    FILTER (
+			        CALCULATETABLE ( fact_inventory, fact_inventory[MonthStart] = LastSnap ),
+			        fact_inventory[UnitsOnHand] < fact_inventory[SafetyStock]
+			    )
+			RETURN
+			    COUNTROWS ( SUMMARIZE ( Breaches, fact_inventory[ProductKey] ) )
+		formatString: #,0
+		lineageTag: 7f546925-0bed-4fe3-b303-6b38981d24ff
+
+	column Placeholder
+		dataType: string
+		isHidden
+		lineageTag: 7d4e7ba9-90c4-4c8a-aa1a-39f0c55a90c2
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition inventory_measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({}, type table [Placeholder = text])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

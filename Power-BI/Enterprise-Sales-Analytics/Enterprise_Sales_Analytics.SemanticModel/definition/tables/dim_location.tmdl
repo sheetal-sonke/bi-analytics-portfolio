@@ -1,0 +1,66 @@
+table dim_location
+	lineageTag: fd4cd288-192e-45ed-9009-3754a04366c2
+
+	column LocationKey
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 2caf72f3-9ab4-441f-a3d0-6d7b230d4f4e
+		summarizeBy: none
+		sourceColumn: LocationKey
+
+		annotation SummarizationSetBy = User
+
+	column LocationName
+		dataType: string
+		lineageTag: bb6a03a8-d56d-40df-81ed-0c801c896877
+		summarizeBy: none
+		sourceColumn: LocationName
+
+		annotation SummarizationSetBy = User
+
+	column Region
+		dataType: string
+		lineageTag: dada7ac4-e40b-4bb5-bce0-0644f583fe1f
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = User
+
+	column State
+		dataType: string
+		lineageTag: 8eb986bf-8472-4f9d-b2ab-e77992d8459f
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = User
+
+	column City
+		dataType: string
+		lineageTag: ceb9e9d1-88db-4ab0-88ea-ade54e0790d1
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = User
+
+	partition dim_location = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(
+				        File.Contents(DataFolder & "\dim_location.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    Promoted = Table.PromoteHeaders(Raw, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {
+				            {"LocationKey", Int64.Type},
+				            {"LocationName", type text},
+				            {"Region", type text},
+				            {"State", type text},
+				            {"City", type text}
+				    })
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

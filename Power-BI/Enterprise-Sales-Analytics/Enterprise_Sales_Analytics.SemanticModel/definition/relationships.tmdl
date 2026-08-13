@@ -1,0 +1,40 @@
+relationship a59b86e5-bcb8-4267-b4bb-d94c34fdbf2a
+	fromColumn: fact_sales.DateKey
+	toColumn: dim_date.DateKey
+
+relationship b13227f2-e9fe-4611-98cc-bc9d3b9929af
+	fromColumn: fact_sales.CustomerKey
+	toColumn: dim_customer.CustomerKey
+
+relationship 27211b6a-6975-4b87-9c1e-282520830162
+	fromColumn: fact_sales.ProductKey
+	toColumn: dim_product.ProductKey
+
+relationship 34673f24-3abb-4232-bf25-0da20b2669cb
+	fromColumn: fact_sales.LocationKey
+	toColumn: dim_location.LocationKey
+
+relationship d2693cff-7deb-417b-9e2c-97209cddde80
+	fromColumn: fact_sales.SalespersonKey
+	toColumn: dim_salesperson.SalespersonKey
+
+relationship 725d3040-6e78-4253-85a2-0ab2965d8090
+	fromColumn: fact_sales_target.MonthStart
+	toColumn: dim_date.Date
+
+relationship 67a64381-b1f9-46cd-8775-75e8df2cdb77
+	fromColumn: fact_sales_target.LocationKey
+	toColumn: dim_location.LocationKey
+
+relationship 4971f590-ff39-40e3-abc1-2601d1f9ae95
+	fromColumn: fact_inventory.MonthStart
+	toColumn: dim_date.Date
+
+relationship 76a440cb-8066-4a32-a558-e7176061496f
+	fromColumn: fact_inventory.ProductKey
+	toColumn: dim_product.ProductKey
+
+relationship 3a771319-b5cd-4558-98ba-0ba2a00d015b
+	fromColumn: fact_inventory.LocationKey
+	toColumn: dim_location.LocationKey
+
