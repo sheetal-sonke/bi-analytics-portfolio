@@ -4,6 +4,19 @@
 
 Power BI and Microsoft Fabric work samples.
 
+## Start here
+
+**[Download the report (.pbix)](https://github.com/sheetal-sonke/bi-analytics-portfolio/blob/main/Power-BI/Enterprise-Sales-Analytics/Enterprise_Sales_Analytics.pbix)**
+Opens in Power BI Desktop with no login, no database connection, no setup. The data is inside the file.
+
+**[Read the DAX without opening Power BI](https://github.com/sheetal-sonke/bi-analytics-portfolio/tree/main/Power-BI/Enterprise-Sales-Analytics/Enterprise_Sales_Analytics.SemanticModel/definition/tables)**
+The model is stored as plain-text TMDL. Start with `inventory_measures.tmdl`.
+
+**[The modelling problem worth looking at](docs/inventory-semi-additive-finding.md)**
+A snapshot fact that reports $369M of inventory when the real figure is $12.3M, and why.
+
+---
+
 ---
 
 ## Enterprise Sales Analytics
